@@ -1,0 +1,38 @@
+.navbar__container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color:  rgb(31, 3, 77);
+}
+
+.navbar__title{
+    color: white;
+    margin: 10px 20px;
+    font-size: xx-large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    cursor: pointer;
+}
+
+.navbar__items{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar__item{
+    margin: 10px;
+    color: white;
+    cursor: pointer;
+}
+
+.navbar__loginBtn{
+    margin: 10px 20px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    background-color: white;
+    color: rgb(31, 3, 77);
+    font-size: small;
+    cursor: pointer;
+}

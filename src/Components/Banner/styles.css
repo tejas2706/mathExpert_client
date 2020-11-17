@@ -1,0 +1,87 @@
+.banner__container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* width: 100%; */
+    height: 70vh;
+    border: 1px solid black;
+}
+
+.banner__quotes{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 500px;
+    /* border: 1px solid black; */
+    padding: 30px;
+    flex: 1;
+}
+
+.banner__quote{
+    font-size: xx-large;
+    font-family: cursive;
+    align-self: center;
+    flex:1;
+}
+
+.banner__image{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 500px;
+    flex: 1;
+}
+
+
+.banner__getStartedBtn {
+    width: 200px;
+    text-align: center;
+    border-radius: 4px;
+    background-color: #94919d;
+    border: 1px solid rgb(170, 170, 170);
+    color: #1d1d1d;
+    font-size: 23px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    transition: all 0.2s;
+    cursor: pointer;
+    text-align: center;
+    padding:10px;
+}
+
+.banner__getStartedBtn:hover{
+    /* border: 2px solid black; */
+    background-color: rgb(5, 0, 87);
+    color: white;
+}
+
+.banner__getStartedBtn span {
+    cursor: pointer;
+    position: relative;
+    transition: 0.5s;
+}
+
+.banner__getStartedBtn span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.banner__getStartedBtn:hover span {
+    padding-right: 25px;
+}
+  
+.banner__getStartedBtn:hover span:after {
+    opacity: 1;
+    right: 0;
+}
