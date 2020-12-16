@@ -1,0 +1,28 @@
+.subTopics__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+}
+
+.subTopics__subTopic{
+    padding: 10px 0 0 0;
+    /* color: gray; */
+    color: white;
+    cursor: pointer;
+}
+
+.subTopics__subTopic:hover{
+    color: #785633;
+}
+
+.subTopics__subTopicTitle {
+    font-size: larger;
+}
+
+
+h2{
+    margin: 0;
+    padding: 0;
+}

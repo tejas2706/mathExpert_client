@@ -1,0 +1,35 @@
+.difficultyLevels__container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+    /* border: 3px solid white; */
+}
+
+
+.line {
+    margin-top: 10px;
+    height: 30px;
+    align-self: flex-start;
+    border-right: 1px solid white;
+}
+
+.difficultyLevels__btn{
+    margin: 0;
+    padding: 10px;
+    font-size: xx-large;
+    font-family: 'Architects Daughter', cursive;
+    text-shadow: 2px 2px 2px #ababab;
+    font-weight: bolder;
+    color: white;
+    cursor: pointer;
+    border: 0;
+    background-color: transparent;
+    transition: transform 0.2s;
+}
+
+.difficultyLevels__btn:hover{
+    color: black;
+    transform: scale(2);
+}

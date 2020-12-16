@@ -1,12 +1,16 @@
 import './App.css';
 import Banner from './Components/Banner';
 import Navbar from './Components/Navbar';
+import SectionCard from './Components/SectionCard';
+import TopicDetails from './Pages/TopicDetails';
 
 function App() {
   return (
-    <div>
+    <div className="app__root">
       <Navbar />
-      <Banner />
+      {/* <Banner /> */}
+      {/* <SectionCard />  */}
+      <TopicDetails />
     </div>
   );
 }

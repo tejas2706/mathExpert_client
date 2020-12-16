@@ -3,15 +3,30 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    background-color:  rgb(31, 3, 77);
+    flex-wrap: wrap;
+    /* background-color:  rgb(31, 3, 77); */
+    /* background-color: #84552D; */
+    background-image: url("/home/murtuza/mathExpert_client/src/assets/wooden.jpg");
+    width: 100%;
 }
 
 .navbar__title{
     color: white;
     margin: 10px 20px;
     font-size: xx-large;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     cursor: pointer;
+}
+
+
+@keyframes rotate {
+    to {
+      transform: skew(50deg);
+    }
+  }
+
+
+.navbar__title:hover{
+    animation: rotate 1s linear infinite;
 }
 
 .navbar__items{
@@ -19,6 +34,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    /* width: ; */
 }
 
 .navbar__item{
@@ -28,7 +44,7 @@
 }
 
 .navbar__loginBtn{
-    margin: 10px 20px;
+    /* margin: 10px 20px; */
     padding: 5px 10px;
     border-radius: 20px;
     background-color: white;
