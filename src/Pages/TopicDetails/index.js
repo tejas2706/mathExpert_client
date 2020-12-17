@@ -9,9 +9,7 @@ function renderQuestions(questionsArray){
 
   let allQuestions = questionsArray.map((eachQues) => {
     return (
-      
         <p className="topicDetails__question">{eachQues}</p>
-      
     )
   })
 
@@ -42,6 +40,9 @@ function TopicDetails() {
           <div className="topicDetails__questionContainer">
             <DifficultyLevels selectedSubTopic={subTopic} selectQuestions={selectQuestions} />
             <div className="topicDetails__line" />
+            <div className="topicDetails__subTopicTitle">
+              <h2>{"SubTopic "+subTopic}</h2>
+            </div>
             <div className="topicDetails__questions">
             {
               renderQuestions(questions)

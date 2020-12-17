@@ -72,6 +72,16 @@
     padding: 10px;
 }
 
+.topicDetails__subTopicTitle{
+    color: white;
+    align-self: center;
+    margin-top: 30px;
+    padding: 10px;
+    border: 1px solid white;
+}
+
+
+
 .topicDetails__questions{
     display: flex;
     flex-direction: column;
@@ -107,8 +117,7 @@
 }
 
 .topicDetails__topicTest:hover{
-    border-radius: 10px;
-    border: 5px solid whitesmoke;
+  
 }
 
 .topicDetails__line {

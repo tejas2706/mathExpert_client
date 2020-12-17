@@ -15,7 +15,6 @@ const temp_questions = {
 
 async function handleDifficultyLevelClick(difficultyLevel, callbackFunctionToSetQuestions){
     let questions = temp_questions[difficultyLevel];
-    console.log("🚀 ~ file: index.js ~ line 18 ~ handleDifficultyLevelClick ~ questions", questions)
     await callbackFunctionToSetQuestions(questions);
 }
 
