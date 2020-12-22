@@ -4,10 +4,11 @@
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    /* background-color:  rgb(31, 3, 77); */
-    /* background-color: #84552D; */
-    background-image: url("/home/murtuza/mathExpert_client/src/assets/wooden.jpg");
+    background-image: url("../../assets/wooden.jpg");
     width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1;
 }
 
 .navbar__title{

@@ -4,9 +4,8 @@
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    /* width: 100%; */
-    height: 70vh;
-    border: 1px solid black;
+    min-width: 300px;
+    margin-top: 30px;
 }
 
 .banner__quotes{
@@ -14,20 +13,22 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-width: 500px;
+    min-width: 300px;
     color: white;
-    /* border: 1px solid black; */
-    padding: 30px;
+    margin: 15vh 2vw;
+    /* min-height: 500px; */
     flex: 1;
 }
 
 .banner__quote{
-    font-size: xx-large;
+    font-size: x-large;
     /* font-family: cursive; */
     align-self: center;
     flex:1;
     font-family: 'Architects Daughter', cursive;
-
+    object-fit: contain;
+    min-height: 100px;
+    /* border: 1px solid white; */
 }
 
 .banner__image{
@@ -35,30 +36,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-width: 500px;
+    width: 50%;
+    height: 50%;
     flex: 1;
     color: white;
 }
 
 
-/* .banner__getStartedBtn {
-    width: 200px;
-    text-align: center;
-    border-radius: 4px;
-    background-color: #94919d;
-    border: 1px solid rgb(170, 170, 170);
-    color: #1d1d1d;
-    font-size: 23px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    margin: 5px;
-    transition: all 0.2s;
-    cursor: pointer;
-    text-align: center;
-    padding:10px;
-} */
 
 .banner__getStartedBtn{
     font-size: x-large;
@@ -69,6 +53,7 @@
     color: white;
     padding: 10px 30px;
     cursor: pointer;
+    object-fit: contain;
 }
 
 .banner__getStartedBtn:hover{

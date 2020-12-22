@@ -33,8 +33,8 @@ function Banner() {
                     <span>Get Started</span>
                 </button>
             </div>
-            <div className="banner__image">
-               <img src={image} height={400} width={500} />
+            <div>
+               <img  className="banner__image" src={image}/>
             </div>
         </div>
     )
