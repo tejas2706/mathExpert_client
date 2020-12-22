@@ -8,9 +8,9 @@ function App() {
   return (
     <div className="app__root">
       <Navbar />
-      {/* <Banner /> */}
-      {/* <SectionCard />  */}
-      <TopicDetails />
+      <Banner />
+      <SectionCard /> 
+      {/* <TopicDetails /> */}
     </div>
   );
 }

@@ -15,6 +15,7 @@
     justify-content: center;
     align-items: center;
     min-width: 500px;
+    color: white;
     /* border: 1px solid black; */
     padding: 30px;
     flex: 1;
@@ -22,9 +23,11 @@
 
 .banner__quote{
     font-size: xx-large;
-    font-family: cursive;
+    /* font-family: cursive; */
     align-self: center;
     flex:1;
+    font-family: 'Architects Daughter', cursive;
+
 }
 
 .banner__image{
@@ -34,10 +37,11 @@
     align-items: center;
     min-width: 500px;
     flex: 1;
+    color: white;
 }
 
 
-.banner__getStartedBtn {
+/* .banner__getStartedBtn {
     width: 200px;
     text-align: center;
     border-radius: 4px;
@@ -54,11 +58,22 @@
     cursor: pointer;
     text-align: center;
     padding:10px;
+} */
+
+.banner__getStartedBtn{
+    font-size: x-large;
+    font-family: 'Architects Daughter', cursive;
+    background-color: transparent;
+    border-radius: 10px;
+    border: 0.5px solid whitesmoke;
+    color: white;
+    padding: 10px 30px;
+    cursor: pointer;
 }
 
 .banner__getStartedBtn:hover{
     /* border: 2px solid black; */
-    background-color: rgb(5, 0, 87);
+    /* background-color: rgb(5, 0, 87); */
     color: white;
 }
 

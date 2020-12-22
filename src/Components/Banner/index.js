@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import './styles.css';
 import  mathQuotes from "../../mathQuotes.js";
+import image from "../../assets/maths-svg.png"
+
 
 function Banner() {
     const [quoteDetails, setquoteDetails] = useState(mathQuotes[Math.ceil(Math.random()*5)])
@@ -32,7 +34,7 @@ function Banner() {
                 </button>
             </div>
             <div className="banner__image">
-                <h3>Image...</h3>
+               <img src={image} height={400} width={500} />
             </div>
         </div>
     )

@@ -7,9 +7,10 @@
     flex-wrap: wrap;
     /* width: 100%; */
     height: auto;
-    border: 1px solid black;
+    border: 1px solid #785633;
     border-radius: 20px;
-    box-shadow: 3px 3px 3px rgba(128,128,128,0.7);
+    /* box-shadow: 3px 3px 3px #a07447; */
+    /* background-color: black; */
 }
 
 .sectionCard__class {
@@ -33,7 +34,8 @@
     height:10vh;
     border: 1px solid black;
     border-radius: 20px;
-    background-color:  rgb(59, 9, 140);
+    /* background-color:  rgb(59, 9, 140); */
+    background-color: #785633;
     color: whitesmoke;
 }
 
@@ -71,10 +73,11 @@ h1,h6,h4, h5{
 }
 
 .sectionCard__topicLink{
-    color: rgb(97, 97, 97);
+    /* color: rgb(97, 97, 97); */
     text-decoration: none;
+    color: white;
 }
 
 .sectionCard__topicLink:hover{
-    color: rgb(0, 0, 0);
+    color: #785633
 }
