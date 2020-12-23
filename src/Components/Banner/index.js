@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import './styles.css';
 import  mathQuotes from "../../mathQuotes.js";
-import image from "../../assets/maths-svg.png"
+import image from "../../assets/pi2.png"
 
 
 function Banner() {
@@ -24,7 +24,11 @@ function Banner() {
 
     return (
         <div className="banner__container">
+            <div className="banner__image">
+               <img className="banner__piImage" src={image}/>
+            </div>
             <div className="banner__quotes">
+                <p></p>
                 <h3 className="banner__quote">{quoteDetails.quote}</h3>
                 <h4 className="banner__author">-- {quoteDetails.author}</h4>
                 <button 
@@ -32,9 +36,6 @@ function Banner() {
                     >
                     <span>Get Started</span>
                 </button>
-            </div>
-            <div>
-               <img  className="banner__image" src={image}/>
             </div>
         </div>
     )

@@ -1,104 +1,23 @@
 import React from 'react';
+import IntroCard from '../IntroCard';
 import './styles.css';
+import cardsContent from '../IntroCard/introCardContent';
 
 function Intro() {    
+    
+    console.log("🚀 ~ file: index.js ~ line 5 ~ cardsContent", cardsContent)
+
     return (
         <div className="intro__container">
             <div className="intro__title">
                 <h1>What is OlympExpert ?</h1>
             </div>
             <div className="intro__cardsContainer">
-
-                <div className="card__container">
-                    <div className="card__image">
-                        <p>image</p>
-                    </div>
-                    <h5>110 hand picked questions</h5>
-                    <p>
-                        Hello boysss how are you mofos.
-                        
-                    </p>
-                </div>
-
-                <div className="card__container">
-                    <div className="card__image">
-                        <p>image</p>
-                    </div>
-                    <h5>110 hand picked questions</h5>
-                    <p>
-                        Hello boysss how are you mofos.
-                    </p>
-                </div>
-                <div className="card__container">
-                    <div className="card__image">
-                        <p>image</p>
-                    </div>
-                    <h5>110 hand picked questions</h5>
-                    <p>
-                        Hello boysss how are you mofos.
-                    </p>
-                </div>
-                <div className="card__container">
-                    <div className="card__image">
-                        <p>image</p>
-                    </div>
-                    <h5>110 hand picked questions</h5>
-                    <p>
-                        Hello boysss how are you mofos.
-                    </p>
-                </div>
-                <div className="card__container">
-                    <div className="card__image">
-                        <p>image</p>
-                    </div>
-                    <h5>110 hand picked questions</h5>
-                    <p>
-                        Hello boysss how are you mofos.
-                    </p>
-                </div>
-                <div className="card__container">
-                    <div className="card__image">
-                        <p>image</p>
-                    </div>
-                    <h5>110 hand picked questions</h5>
-                    <p>
-                        Hello boysss how are you mofos.
-                    </p>
-                </div>
-                <div className="card__container">
-                    <div className="card__image">
-                        <p>image</p>
-                    </div>
-                    <h5>110 hand picked questions</h5>
-                    <p>
-                        Hello boysss how are you mofos.
-                        Hello boysss how are you mofos.
-                        Hello boysss how are you mofos.
-                        Hello boysss how are you mofos.
-                        Hello boysss how are you mofos.
-                        Hello boysss how are you mofos.
-                        Hello boysss how are you mofos.
-                    </p>
-                </div>
-                <div className="card__container">
-                    <div className="card__image">
-                        <p>image</p>
-                    </div>
-                    <h5>110 hand picked questions</h5>
-                    <p>
-                        Hello boysss how are you mofos.
-                    </p>
-                </div>
-                <div className="card__container">
-                    <div className="card__image">
-                        <p>image</p>
-                    </div>
-                    <h5>110 hand picked questions</h5>
-                    <p>
-                        Hello boysss how are you mofos.
-                    </p>
-                </div>
-
+                {
+                    cardsContent.map((each)=>{
+                        return(<IntroCard cardData={each}/>)
+                    })
+                }
             </div>
         </div>
     )
