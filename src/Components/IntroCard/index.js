@@ -5,11 +5,11 @@ function IntroCard({cardData}) {
     console.log("🚀 ~ file: index.js ~ line 5 ~ IntroCard ~ cardData", cardData)
     return (
         <div className="card__container">
-            <div className="card__image">
-                <p>{cardData.imageUrl}</p>
+            <div>
+                <img className="card__image" src={cardData.imageUrl}></img>
             </div>
-            <h5>{cardData.title}</h5>
-            <p>
+            <h5 className="card__title">{cardData.title}</h5>
+            <p className="card__description">
                 {cardData.description}
             </p>
         </div>      

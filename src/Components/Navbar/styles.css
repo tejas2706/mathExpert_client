@@ -4,30 +4,31 @@
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    background-image: url("../../assets/wooden.jpg");
+    background-color: black;
+    /* background-image: url("../../assets/wooden.jpg"); */
     width: 100%;
     position: fixed;
+    color: white;
     top: 0;
+    z-index: 1;
+    transition: all 0.5s;
+}
+
+.navbar__container_withBg{
+    background-color: #ebebeb;
+    color: black;
     z-index: 1;
 }
 
 .navbar__title{
-    color: white;
+    /* color: white; */
     margin: 10px 20px;
     font-size: xx-large;
     cursor: pointer;
 }
 
-
-@keyframes rotate {
-    to {
-      transform: skew(50deg);
-    }
-  }
-
-
 .navbar__title:hover{
-    animation: rotate 1s linear infinite;
+    color: ;
 }
 
 .navbar__items{
@@ -40,16 +41,23 @@
 
 .navbar__item{
     margin: 10px;
-    color: white;
+    /* color: white; */
+    font-size: large;
     cursor: pointer;
 }
 
 .navbar__loginBtn{
-    /* margin: 10px 20px; */
-    padding: 5px 10px;
-    border-radius: 20px;
-    background-color: white;
-    color: rgb(31, 3, 77);
-    font-size: small;
+    margin: 0 20px;
+    padding: 5px 15px;
+    border-radius: 8px;
+    color: rgb(0, 0, 0);
+    font-size: medium;
     cursor: pointer;
+    border: 1px solid black;
+}
+
+.navbar__loginBtn:hover{
+    color: rgb(255, 255, 255);
+    background-color: black;
+    border:1px solid white;
 }

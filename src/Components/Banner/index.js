@@ -2,12 +2,11 @@ import React, {useState, useEffect} from 'react';
 import './styles.css';
 import  mathQuotes from "../../mathQuotes.js";
 import image from "../../assets/pi2.png"
+import RotatingCube from '../RotatingCube';
 
 
 function Banner() {
     const [quoteDetails, setquoteDetails] = useState(mathQuotes[Math.ceil(Math.random()*5)])
-    
-    
     
     useEffect(() => {
         function changeQuote(){
@@ -25,15 +24,13 @@ function Banner() {
     return (
         <div className="banner__container">
             <div className="banner__image">
-               <img className="banner__piImage" src={image}/>
+                <RotatingCube />
             </div>
             <div className="banner__quotes">
                 <p></p>
                 <h3 className="banner__quote">{quoteDetails.quote}</h3>
                 <h4 className="banner__author">-- {quoteDetails.author}</h4>
-                <button 
-                    className="banner__getStartedBtn"
-                    >
+                <button className="banner__getStartedBtn">
                     <span>Get Started</span>
                 </button>
             </div>

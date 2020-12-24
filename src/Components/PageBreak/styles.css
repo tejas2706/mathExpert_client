@@ -1,0 +1,19 @@
+.pageBreak__container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-top: 40px;
+}
+
+.pageBreak__line{
+    border: 1px solid white;
+    width: 40%;
+    height: 0;
+}
+
+.pageBreak__symbols{
+    color: white;
+    font-size: 2em;
+}
