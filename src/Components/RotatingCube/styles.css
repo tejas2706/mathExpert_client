@@ -37,6 +37,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 20px;
 }
 
 .cube__face--front  { background: rgba(46, 67, 93, 0.7); }

@@ -15,7 +15,7 @@ function Banner() {
                 setquoteDetails(mathQuotes[randomQuoteNumber === quoteDetails.quoteId ? 
                     quoteDetails.quoteId - 1 ? quoteDetails.quoteId - 1 : quoteDetails.quoteId + 1 : 
                     randomQuoteNumber])
-            }, 5000);
+            }, 10000);
             return;
         }
         changeQuote()

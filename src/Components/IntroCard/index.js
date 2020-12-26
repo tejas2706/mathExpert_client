@@ -2,9 +2,8 @@ import React from 'react';
 import './styles.css';
 
 function IntroCard({cardData}) {    
-    console.log("🚀 ~ file: index.js ~ line 5 ~ IntroCard ~ cardData", cardData)
     return (
-        <div className="card__container">
+        <a className="card__container" href={"#"+cardData.id}>
             <div>
                 <img className="card__image" src={cardData.imageUrl}></img>
             </div>
@@ -12,7 +11,7 @@ function IntroCard({cardData}) {
             <p className="card__description">
                 {cardData.description}
             </p>
-        </div>      
+        </a>
     )
 }
 

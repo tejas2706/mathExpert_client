@@ -7,7 +7,7 @@ function PageBreak() {
             <div className="pageBreak__line">
             </div>
             <div className="pageBreak__symbols">
-                <p>&nbsp;+ - x ÷ %&nbsp;</p>
+                <p>&nbsp;+ - x ÷&nbsp;</p>
             </div>
             <div className="pageBreak__line">
             </div>
