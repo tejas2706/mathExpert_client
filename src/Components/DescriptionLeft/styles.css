@@ -8,6 +8,9 @@
     margin: 80px 0;
     background-color: rgb(112, 112, 112);
     padding: 10px;
+    box-shadow: 0 0 10px 1px rgb(160, 160, 160);
+    -webkit-box-shadow: 0 0 10px 1px rgb(160, 160, 160);
+    -moz-box-shadow: 0 0 10px 1px #fff;
 }
 
 .descriptionLeft__mediaData{

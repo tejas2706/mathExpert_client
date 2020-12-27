@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import './styles.css';
 import  mathQuotes from "../../mathQuotes.js";
-import image from "../../assets/pi2.png"
 import RotatingCube from '../RotatingCube';
 
 

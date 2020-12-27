@@ -1,4 +1,4 @@
-export default [
+const introContent = [
     {
         "id":1,
         "imageUrl":"",
@@ -18,3 +18,5 @@ export default [
         "text": "Practice tests play an integral role in the preparation of any Exam and here you can find tests for each topic as well as the mock olympiad timed tests which will improve your time Management skills."
     }
 ]
+
+export default introContent;

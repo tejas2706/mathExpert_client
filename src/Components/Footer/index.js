@@ -1,5 +1,4 @@
 import React from 'react'
-import PageBreak from "../PageBreak";
 import "./styles.css"
 
 function Footer() {

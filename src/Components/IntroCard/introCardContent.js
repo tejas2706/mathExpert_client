@@ -2,7 +2,7 @@ import plearn from '../../assets/pLearn.png';
 import vidMan from '../../assets/vidMan.png';
 import test from '../../assets/test.png';
 
-export default [
+const introCardDetails = [
     {
         "id":1,
         "imageUrl":plearn,
@@ -22,3 +22,5 @@ export default [
         "description":"We believe tests/quizzes as a key to assess oneself about whatever they do and hence we recommend individual topic wise test to self motivate."
     }
 ]
+
+export default introCardDetails;

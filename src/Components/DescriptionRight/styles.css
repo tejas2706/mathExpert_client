@@ -6,6 +6,9 @@
     flex-wrap: wrap;
     background-color: rgb(61, 59, 59);
     padding: 10px;
+    box-shadow: 0 0 10px 1px rgb(82, 82, 82);
+    -webkit-box-shadow: 0 0 10px 1px rgb(82, 82, 82);
+    -moz-box-shadow: 0 0 10px 1px #fff;
 }
 
 .descriptionRight__mediaData{
