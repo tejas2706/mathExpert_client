@@ -3,17 +3,17 @@ import './styles.css';
 
 function Question({data}) {
     return (
-        <div className="Question__container">
-            <h1>Q: {data.qNumber}</h1>
-            <h3>{data.question}</h3>
-            <div>
-            {
-                data.imageUrl ? 
-                <img src={data.imageUrl}></img>
-                :
-                <p>no image</p>
-            }
-            </div>
+        <div className="question__container">
+            <div className="question__qNumAndQues">
+                <h1 className="question__Q">Q: {data.qNumber} &nbsp;</h1>
+                <h1>{data.question}</h1>
+                </div>
+                {
+                    data.imageUrl ? 
+                    <img src={data.imageUrl}></img>
+                    :
+                    null
+                }
         </div>
     )
 }

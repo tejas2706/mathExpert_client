@@ -1,5 +1,47 @@
-.Question__container{
+.question__container{
     display: flex;
     flex-direction: column;
     width: 90%;
+    /* border: 1px solid white; */
+    margin-top: 40px;
+    color: white;
+    padding: 5px;
+}
+
+.question__qNumAndQues{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    /* border: 1px solid white; */
+}
+
+.question__Q{
+    font-size: xx-large;
+    align-self: flex-start;
+}
+
+.options__btnGrp{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.options__submitBtn{
+    font-size: larger;
+    margin: 10px;
+    cursor: pointer;
+    background-color: rgb(75, 150, 0);
+    color: rgb(235, 235, 235);
+    transition: all 0.1s;
+    border-radius: 8px;
+    padding:10px;
+    width: 200px;
+}
+
+.options__submitBtn:hover{
+    background-color: #03ac00;
+    transform: scale(1.1);
 }
