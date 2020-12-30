@@ -1,0 +1,36 @@
+.hints__container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 65vh;
+    background-color: black;
+    margin: 5px;
+    border-radius: 5px;
+    padding: 10px;
+    /* min-height: 200px; */
+    /* flex: 3; */
+}
+
+.hints__hints{
+    flex:1;
+    min-width: 300px;
+    height: fit-content;
+    color: white;
+}
+
+.hints__hintsBtn{
+    font-size: x-large;
+    background-color: rgb(255, 37, 37);
+    border-radius: 5px;
+    border:none;
+    cursor: pointer;
+}
+
+.hints__hint{
+    background-color: rgb(255, 161, 161);
+    border-radius: 5px;
+    padding: 1px 2px;
+    color: black;
+    /* margin: 20px; */
+    font-size: larger;
+}

@@ -1,0 +1,11 @@
+.headerPanel__container{
+    width:100%;
+    margin: 5px;
+    border: 1px solid black;
+    color: white;
+    padding: 5px;
+}
+
+.headerPanel__title{
+    margin: 0;
+}
