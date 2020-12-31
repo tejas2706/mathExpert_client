@@ -5,7 +5,6 @@ function HeaderPanel() {
     return (
         <div className="headerPanel__container">
             <h2 className="headerPanel__title">MathExpert</h2>
-
         </div>
     )
 }

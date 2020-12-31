@@ -14,6 +14,7 @@
     justify-content: center;
     flex-wrap: wrap;
     margin: 5px;
+    width: 100%;
 }
 
 .questions__quesAndOptions{
@@ -21,6 +22,7 @@
     min-width: 300px;
     background-color: black;
     margin: 5px;
+    border-radius: 5px;
 }
 
 .questions__hintsAndSolutions{

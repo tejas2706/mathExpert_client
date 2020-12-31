@@ -16,7 +16,7 @@ function Questions() {
 
     return (
         <div className="questions__container">
-            <HeaderPanel />
+            <HeaderPanel className="questions__headerPanel"/>
             <div className="questions__innerContainer">
                 <div className="questions__quesAndOptions">
                     <Question data={question} options={question.options} submitAns={submitAns}/>

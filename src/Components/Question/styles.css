@@ -1,24 +1,36 @@
 .question__container{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
+    align-items: flex-start;
+    justify-content: space-between;
     overflow-y: scroll;
     flex: 2;
     min-width: 300px;
     color: white;
-    background-color: black;
-    height: 85vh;
+    height: 81vh;
     min-height: 300px;
-    border-radius: 5px;
+    padding: 10px;
 }
 
 .question__header{
-    height: 30px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 40px;
     width: 100%;
     background-color: rgb(75, 75, 75);
-    /* border-radius: 5px; */
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
     top: 0;
+    padding: 0 10px;
+    color: white;
+    font-weight: bold;
+}
+
+.question__header h4{
+    margin: 0;
 }
 
 .question__qNumAndQues{
@@ -34,6 +46,20 @@
     align-self: flex-start;
 }
 
+.question__speratingLine{
+    border-bottom: 1px solid white;
+    width: 80%;
+    align-self: center;
+}
+
+.options__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid white; */
+}
+
 .options__btnGrp{
     display: flex;
     flex-direction: row;
@@ -46,16 +72,17 @@
     font-size: larger;
     margin: 10px;
     cursor: pointer;
-    background-color: rgb(75, 150, 0);
+    background-color: rgb(52, 104, 0);
     color: rgb(235, 235, 235);
     transition: all 0.1s;
     border-radius: 8px;
     padding:10px;
     width: 200px;
+    border: none;
 }
 
 .options__submitBtn:hover{
-    background-color: #03ac00;
+    background-color: #039900;
 }
 
 .options__title{
@@ -68,37 +95,41 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    width: 70%;
+    width: 90%;
     min-width: 300px;
     /* border: 1px solid green; */
 }
 
 .options__eachOption,
 .options__selectedOption{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
     border: 1px double black;
     border-radius: 5px;
     min-width: 300px;
     min-height: 50px;
-    height: max-content;
-    align-items: center;
     font-size: x-large;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     margin: 10px 20px;
     cursor: pointer;
-    background-color: white;
+    background-color: rgb(191, 191, 191);
     color: black;
     font-weight: bold;
+    white-space: pre-line;
+    word-wrap    : break-word;
+    overflow-wrap: break-word;
+    padding: 0 10px;
 }
 
 .options__selectedOption{
     background-color: rgb(180, 221, 180);
-    border: 1px solid white;
+    /* border: 1px solid white; */
 }
 
 .options__eachOption:hover{
-    background-color: rgb(34, 34, 34);
+    background-color: rgb(72, 72, 72);
     color: white;
     border: 1px solid rgb(201, 201, 201);
 }
