@@ -1,0 +1,50 @@
+.sketchFieldComponent__modal{
+    background-color: white;
+}
+
+.sketchFieldComponent__modal_title{
+    background-color: rgb(158, 158, 158);
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.sketchFieldComponenet__container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* align-items: center; */
+    justify-content: space-between;
+    height: 10vh;
+    background-color: black;
+    margin: 5px;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.sketchFieldComponent__modal_title h4{
+    margin: 0;
+}
+
+.sketchFieldComponenet__scratchPadBtn{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 45%;
+    cursor: pointer;
+    border: none;
+    border-radius: 3px;
+    font-size: medium;
+    background-color: rgb(75, 75, 75);
+    border: none;
+    box-shadow: 0 0 10px 1px rgb(160, 160, 160);
+    -webkit-box-shadow: 0 0 3px 1px rgb(160, 160, 160);
+    -moz-box-shadow: 0 0 3px 1px #fff;
+    cursor: pointer;
+    font-weight: bold;
+    color: whitesmoke;
+}
