@@ -5,7 +5,8 @@ function Solutions() {
 
     return (
         <div className="solutions__container">
-            <p>solutions Tab</p>
+            <button className="solutions__fullSol">Full Solution</button>
+            <button className="solutions__fullVidSol">Video Explanation</button>
         </div>
     )
 }

@@ -14,15 +14,36 @@
 .hints__hints{
     flex:1;
     height: fit-content;
-    color: white;
+}
+
+.hints__hintsTitile{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .hints__hintsBtn{
     font-size: x-large;
-    background-color: rgb(255, 37, 37);
+    background-color: rgb(141, 141, 141);
     border-radius: 5px;
     border:none;
-    cursor: pointer;
+    padding: 0 10px;
+    width: 20%;
+    min-width: 102px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    -webkit-text-stroke: 1px black;
+
+
+}
+
+.hints__titileDescription{
+    color: white;
+    word-wrap: break-word;
+    line-break: strict;
+    margin: 10px;
 }
 
 .hints__hint{

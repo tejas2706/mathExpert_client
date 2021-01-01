@@ -5,6 +5,7 @@ import Hints from '../../Components/Hints';
 import Solutions from '../../Components/Solutions';
 import HeaderPanel from '../../Components/HeaderPanel';
 import './styles.css';
+import SketchFieldComponent from '../../Components/SketchFieldComponent';
 
 function Questions() {
 
@@ -23,6 +24,7 @@ function Questions() {
                 </div>
                 <div className="questions__hintsAndSolutions">
                     <Hints />
+                    <SketchFieldComponent />
                     <Solutions />
                 </div>
             </div>

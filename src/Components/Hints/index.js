@@ -25,17 +25,12 @@ function Hints() {
     return (
         <div className="hints__container">
             <div className="hints__hints">
-                <button className="hints__hintsBtn">Hints ↯</button>
+                <div className="hints__hintsTitile">
+                    <div className="hints__hintsBtn">Hints ↯</div>
+                    <span className="hints__titileDescription">Try enough before diving into the hints and solutions.</span>
+                </div>
                 <div className="hints__displayHints">
                     <HintAccordion hints={allHints}/>
-                    {/* {
-                        allHints ? allHints.map((each)=>{
-                            return(
-                                <HintAccordion hint={each} />
-                            )
-                        })
-                        :null
-                    } */}
                 </div>
             </div>
         </div>

@@ -2,10 +2,34 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
     color: #ffffff;
     height: 20vh;
     background-color: black;
     margin: 5px;
     border-radius: 5px;
     padding: 10px;
+}
+
+.solutions__fullSol,
+.solutions__fullVidSol{
+    width: 90%;
+    height: 40%;
+    border-radius: 5px;
+    background-color: rgb(75, 75, 75);
+    border: none;
+    box-shadow: 0 0 10px 1px rgb(160, 160, 160);
+    -webkit-box-shadow: 0 0 3px 1px rgb(160, 160, 160);
+    -moz-box-shadow: 0 0 3px 1px #fff;
+    cursor: pointer;
+    font-weight: bold;
+    color: whitesmoke;
+    font-size: medium;
+}
+
+.solutions__fullSol:hover,
+.solutions__fullVidSol:hover{
+    background-color: gray;
+    color: black;
 }

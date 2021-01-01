@@ -5,6 +5,7 @@ import AccordionDetails from '@material-ui/core/AccordionDetails';
 import AccordionSummary from '@material-ui/core/AccordionSummary';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import './styles.css';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -14,11 +15,11 @@ const useStyles = makeStyles((theme) => ({
     fontSize: theme.typography.pxToRem(15),
     flexBasis: '33.33%',
     flexShrink: 0,
-  },
-  secondaryHeading: {
-    fontSize: theme.typography.pxToRem(15),
-    color: theme.palette.text.secondary,
-  },
+  }
+  // secondaryHeading: {
+  //   fontSize: theme.typography.pxToRem(15),
+  //   color: theme.palette.text.secondary,
+  // },
 }));
 
 export default function HintAccordion({hints}) {
@@ -33,24 +34,26 @@ export default function HintAccordion({hints}) {
   return (
     <div className={classes.root}>
         {
-            hints.length ? hints.map((eachhint)=>{
+            hints.length ? hints.map((eachhint, index)=>{
             return (
-                <Accordion expanded={ expanded === eachhint.id } onChange={handleChange(eachhint.id)}>
+              <div className="hintAccordion__eachAccordion">
+                <Accordion style={{backgroundColor:"rgb(55, 55, 55)", color:" rgb(226, 226, 226)"}} expanded={ expanded === eachhint.id } onChange={handleChange(eachhint.id)}>
                     <AccordionSummary
-                    expandIcon={<ExpandMoreIcon />}
+                    expandIcon={<ExpandMoreIcon style={{color:"white"}} />}
                     aria-controls="panel1bh-content"
                     id="panel1bh-header"
                     >
-                    <Typography className={classes.heading}>General settings</Typography>
-                    <Typography className={classes.secondaryHeading}>I am an accordion</Typography>
+                    <Typography className={classes.heading}>Hint {index+1}</Typography>
+                    {/* <Typography className={classes.secondaryHeading}>I am an accordion</Typography> */}
                     </AccordionSummary>
                     <AccordionDetails>
                     <Typography>
-                    {eachhint.hint}
+                      <b>{eachhint.hint}</b>
                     </Typography>
                     </AccordionDetails>
                 </Accordion>
-                )
+              </div>
+              )
             })
             :null
         }
