@@ -36,10 +36,12 @@ function SketchFieldComponent() {
 
     const handleClose = () => {
         setOpen(false);
+        setScratchPad(false);
+        setopenSolutions(false);
     };
 
     const handleOpenSolutions = () => {
-        console.log("-----------------")
+        setOpen(true);
         setopenSolutions(true);
     }
 
@@ -69,15 +71,21 @@ function SketchFieldComponent() {
                                 <h3>Scratchpad</h3>
                                 <HighlightOffIcon onClick={()=>handleClose()}/>
                             </div>
-                                <SketchField width='80vw'
-                                height='70vh'
-                                tool={Tools.Pencil}
-                                lineColor='black'
-                                lineWidth={3} />
+                            <SketchField width='80vw'
+                            height='70vh'
+                            tool={Tools.Pencil}
+                            lineColor='black'
+                            lineWidth={3} />
                         </div> : 
                         type === "submissions" ?
-                        <div className={classes.paper}  className="sketchFieldComponent__modal">
-                            <h4>Submissions</h4>
+                        <div className={classes.paper}  className="showSubmissions__container">
+                            <div className="sketchFieldComponent__modal_title">
+                                <h3>Your Submissions</h3>
+                                <HighlightOffIcon onClick={()=>handleClose()}/>
+                            </div>
+                            <div className="showSubmissions__images">
+                                <p>submissions</p>
+                            </div>
                         </div> :
                         null
                     }
@@ -98,7 +106,7 @@ function SketchFieldComponent() {
                 </div>:
                 openSolutions ? 
                 <div>
-                    {modal("scratchPad")}
+                    {modal("submissions")}
                 </div>:
                 null
             }
