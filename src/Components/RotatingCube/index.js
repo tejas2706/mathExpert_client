@@ -14,6 +14,7 @@ function RotatingCube() {
                 <div className="cube__face cube__face--right"><img className="cube__image"  alt="alpha" src={alpha}></img></div>
                 <div className="cube__face cube__face--left"><img className="cube__image"  alt="omega" src={omega}></img></div>
                 <div className="cube__face cube__face--bottom"></div>
+                <div className="cube__face cube__face--top"></div>
             </div>
         </div>
     )

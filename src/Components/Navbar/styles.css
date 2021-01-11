@@ -28,8 +28,14 @@
 }
 
 .navbar__title:hover{
-    color: ;
+
 }
+
+.navbar__title::before{
+    content: "☰";
+    display: none;
+}
+
 
 .navbar__items{
     display: flex;
@@ -60,4 +66,16 @@
     color: rgb(255, 255, 255);
     background-color: black;
     border:1px solid white;
+}
+
+
+@media (max-width: 400px){
+    .navbar__items{
+        display: none;
+    }
+
+    .navbar__title::before {
+        display: block;
+        width: fit-content;
+    }
 }

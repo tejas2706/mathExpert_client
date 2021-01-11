@@ -15,21 +15,21 @@ const temp_questions = {
 
 async function handleDifficultyLevelClick(difficultyLevel, callbackFunctionToSetQuestions){
     let questions = temp_questions[difficultyLevel];
-    await callbackFunctionToSetQuestions(questions);
+    await callbackFunctionToSetQuestions(difficultyLevel,questions);
 }
 
-function Question({ selectedSubTopic, selectQuestions }) {
+function Question({ selectedSubTopic, handleDifficultyLevelChange, setDifficultyLevel }) {
 
-    const [difficultyLevel, setDifficultyLevel] = useState("easy")
-    handleDifficultyLevelClick(difficultyLevel,selectQuestions)
+    const [difficultyLevel, setDifficulty] = useState("easy")
+    handleDifficultyLevelClick(difficultyLevel,handleDifficultyLevelChange)
 
     return (
         <div className="difficultyLevels__container">
-            <button className="difficultyLevels__btn" onClick={async () => await setDifficultyLevel("easy")}>Easy</button>
+            <button className="difficultyLevels__btn" onClick={async () => await setDifficulty("easy")}>Easy</button>
             <div className="line" />
-            <button className="difficultyLevels__btn" onClick={async () => await setDifficultyLevel("medium")}>Medium</button>
+            <button className="difficultyLevels__btn" onClick={async () => await setDifficulty("medium")}>Medium</button>
             <div className="line" />
-            <button className="difficultyLevels__btn" onClick={async () => await setDifficultyLevel("hard")}>Hard</button>
+            <button className="difficultyLevels__btn" onClick={async () => await setDifficulty("hard")}>Hard</button>
             {/* <div className="line" /> */}
         </div>
     )

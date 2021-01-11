@@ -1,0 +1,70 @@
+.container{
+    position: relative;
+    margin: 0;
+    min-width: 124px;
+    min-height: 79px;
+}
+
+
+.mainDiv {
+    position: absolute;
+    width: 10%;
+    height: 20%;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    min-width: 124px;
+    min-height: 79px;
+
+}
+
+.rotate60 {
+    transform: rotate(60deg);
+}
+
+.rotate-60 {
+    transform: rotate(-60deg);
+}
+
+.easy {
+    border-top-color: Green; 
+    border-bottom-color: Green; 
+    background: linear-gradient(to left, 
+    DarkGreen, Green); 
+}
+
+.easy-active {
+    border-top-color: LimeGreen; 
+    border-bottom-color: LimeGreen; 
+    background: linear-gradient(to left, 
+    LimeGreen, Lime); 
+}
+
+
+.medium {
+    border-top-color: MidnightBlue; 
+    border-bottom-color: MidnightBlue; 
+    background: linear-gradient(to left, 
+    MidnightBlue, MediumBlue); 
+}
+
+.medium-active {
+    border-top-color: DodgerBlue; 
+    border-bottom-color: DodgerBlue; 
+    background: linear-gradient(to left, 
+    DodgerBlue, DeepSkyBlue); 
+}
+
+.hard {
+    border-top-color: DarkRed; 
+    border-bottom-color: DarkRed; 
+    background: linear-gradient(to left, 
+    DarkRed, Crimson); 
+}
+
+.hard-active {
+    border-top-color: firebrick; 
+    border-bottom-color: firebrick; 
+    background: linear-gradient(to left, 
+    Red, salmon); 
+}
+
