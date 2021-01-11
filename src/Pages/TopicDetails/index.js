@@ -51,7 +51,7 @@ function TopicDetails() {
           <div className="topicDetails__line" />
           <div className="topicDetails__subTopicTitle">
             <h2>{"SubTopic " + subTopic}</h2>
-            <div className="topicDetails__subTopicTitle__dropdown" onClick={ }>
+            <div className="topicDetails__subTopicTitle__dropdown">
               <i className="arrow down"></i>
             </div>
           </div>
