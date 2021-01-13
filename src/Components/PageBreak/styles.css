@@ -8,12 +8,12 @@
 }
 
 .pageBreak__line{
-    border: 1px solid white;
+    border: 1px solid black;
     width: 40%;
     height: 0;
 }
 
 .pageBreak__symbols{
-    color: white;
+    color: black;
     font-size: 2em;
 }

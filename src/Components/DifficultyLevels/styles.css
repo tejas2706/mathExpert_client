@@ -3,7 +3,7 @@
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    color: white;
+    color: black;
     /* border: 3px solid white; */
 }
 
@@ -12,7 +12,7 @@
     margin-top: 10px;
     height: 30px;
     align-self: flex-start;
-    border-right: 1px solid white;
+    border-right: 1px solid black;
 }
 
 .difficultyLevels__btn{
@@ -22,7 +22,6 @@
     font-family: 'Architects Daughter', cursive;
     text-shadow: 2px 2px 2px #ababab;
     font-weight: bolder;
-    color: white;
     cursor: pointer;
     border: 0;
     background-color: transparent;
@@ -30,6 +29,6 @@
 }
 
 .difficultyLevels__btn:hover{
-    color: black;
+    color: gray;
     transform: scale(2);
 }

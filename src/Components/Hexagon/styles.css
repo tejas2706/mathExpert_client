@@ -8,12 +8,10 @@
 
 .mainDiv {
     position: absolute;
-    width: 10%;
-    height: 20%;
     border: 1px solid transparent;
     border-radius: 10px;
-    min-width: 124px;
-    min-height: 79px;
+    min-width: 100px;
+    min-height: 50px;
 
 }
 

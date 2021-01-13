@@ -12,6 +12,7 @@ function App() {
       <Navbar />
       {/* <Home /> */}
       <TopicDetails />
+      {/* <Questions /> */}
       <Footer />
     </div>
   );

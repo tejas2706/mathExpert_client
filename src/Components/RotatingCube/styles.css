@@ -47,9 +47,9 @@
 .cube__face--top    { background: rgba(46, 67, 93, 0.7); }
 .cube__face--bottom { 
     background: rgba(46, 67, 93, 0.7);  
-    box-shadow: 0 0 50px 5px #fff;
-    -webkit-box-shadow: 0 0 50px 5px #fff;
-    -moz-box-shadow: 0 0 50px 5px #fff;
+    box-shadow: 0 0 50px 5px #000;
+    -webkit-box-shadow: 0 0 50px 5px #000;
+    -moz-box-shadow: 0 0 50px 5px #000;
 }
 
 .cube__face--front  { transform: rotateY(  0deg) translateZ(100px); }
