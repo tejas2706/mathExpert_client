@@ -3,20 +3,50 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 10px;
     margin: 10px;
     width: 28%;
     min-width: 300px;
-    transition: 0.2s;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    animation: fadeIn ease 2s;
+}
+
+@keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+
+.card__container_upper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border-top-left-radius: 30px;
     background-color: white;
-    color:black;
-    transition: all 0.2s;
-    border: 0.5px solid black;
+    padding: 10px;
+    height: 200px;
+}
+
+.card__container_lower{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border-bottom-right-radius: 30px;
+    background-color: #36B9D7;
+    padding: 10px;
+    height: 130px;
 }
 
 .card__container:hover{
     /* transform: scale(); */
-    border: 0.5px solid gray;
+    /* border: 0.5px solid gray; */
     box-shadow: 0 0 5px 5px gray;
     -webkit-box-shadow: 0 0 5px 5px gray;
     -moz-box-shadow: 0 0 5px 5px gray;

@@ -2,7 +2,8 @@ import React, {useState, useEffect} from 'react';
 import './styles.css';
 import  mathQuotes from "../../mathQuotes.js";
 import RotatingCube from '../RotatingCube';
-
+import DoubleArrowIcon from '@material-ui/icons/DoubleArrow';
+import PlayForWorkIcon from '@material-ui/icons/PlayForWork';
 
 function Banner() {
     const [quoteDetails, setquoteDetails] = useState(mathQuotes[Math.ceil(Math.random()*5)])
@@ -23,15 +24,26 @@ function Banner() {
     return (
         <div className="banner__container">
             <div className="banner__image">
-                <h2>Hit ↯ to explore the question of the day !!</h2>
+                <div className="banner__imageTitle">
+                    <h2>Hit ↯ to explore the question of the day !!</h2>
+                </div>
                 <RotatingCube />
             </div>
             <div className="banner_tagLine">
                 <h1>Prepare for the olympiads with Competitive Prep.</h1>
-                <div className="banner_contentBoxes">
-                    <div className="banner_eachBox">Learn</div>
-                    <div className="banner_eachBox">Practice</div>
-                    <div className="banner_eachBox">Assess</div>
+                <div className="banner_contentBoxes_vertical">
+                    <div className="banner_eachBox red_box">Learn</div>
+                    <DoubleArrowIcon style={{transform:"rotate(90deg)"}}/>
+                    <div className="banner_eachBox yellow_box">Practice</div>
+                    <DoubleArrowIcon style={{transform:"rotate(90deg)"}}/>
+                    <div className="banner_eachBox green_box">Assess</div>
+                </div>
+                <div className="banner_contentBoxes_horizontal">
+                    <div className="banner_eachBox red_box">Learn</div>
+                    <DoubleArrowIcon />
+                    <div className="banner_eachBox yellow_box">Practice</div>
+                    <DoubleArrowIcon />
+                    <div className="banner_eachBox green_box">Assess</div>
                 </div>
                 <button className="banner__getStartedBtn">
                     <span>Get Started</span>

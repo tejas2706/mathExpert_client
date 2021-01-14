@@ -11,7 +11,7 @@ function Footer() {
                 <a className="footer_link" href="#" >Privacy Policy</a>
             </div>
             <div className="footer__copyrights">
-                <p cl>Copyright © 2020-2040 OlympExpert, All rights reserved.</p>
+                <p>Copyright © 2020-2040 OlympExpert, All rights reserved.</p>
             </div>
         </div>
     )

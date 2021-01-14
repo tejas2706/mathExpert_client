@@ -3,15 +3,19 @@ import './styles.css';
 
 function IntroCard({cardData}) {    
     return (
-        <a className="card__container" href={"#"+cardData.id}>
-            <div>
-                <img alt={cardData.highlight} className="card__image" src={cardData.imageUrl}></img>
+        <div className="card__container">
+            <div className="card__container_upper">
+                <div>
+                    <img alt={cardData.highlight} className="card__image" src={cardData.imageUrl}></img>
+                </div>
+                <h5 className="card__title">{cardData.title}</h5>
             </div>
-            <h5 className="card__title">{cardData.title}</h5>
-            <p className="card__description">
-                {cardData.description}
-            </p>
-        </a>
+            <div className="card__container_lower">
+                <p>
+                    {cardData.description}
+                </p>
+            </div>
+        </div>
     )
 }
 

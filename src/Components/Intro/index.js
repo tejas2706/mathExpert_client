@@ -25,21 +25,6 @@ function Intro() {
                     })
                 }
             </div>
-            <div className="intro__descriptions">
-                {
-                    IntroContent.map((each, i)=>{
-                        if(i%2){
-                            return (
-                                <DescriptionLeft content={each}/>
-                            )
-                        }else{
-                            return(
-                                <DescriptionRight content={each}/>   
-                            )
-                        }
-                    })
-                }
-            </div>
         </div>
     )
 }
