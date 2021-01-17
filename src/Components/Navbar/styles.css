@@ -4,19 +4,19 @@
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
-    background-color: black;
+    background-color: whitesmoke;
     /* background-image: url("../../assets/wooden.jpg"); */
     width: 100%;
     position: fixed;
-    color: white;
+    color: black;
     top: 0;
     z-index: 1;
     transition: all 0.5s;
 }
 
 .navbar__container_withBg{
-    background-color: #ebebeb;
-    color: black;
+    background-color: black;
+    color: white;
     z-index: 1;
 }
 

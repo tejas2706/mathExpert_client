@@ -29,7 +29,7 @@
     border-top-left-radius: 30px;
     background-color: white;
     padding: 10px;
-    height: 200px;
+    height: 150px;
 }
 
 .card__container_lower{
@@ -59,10 +59,12 @@
 
 .card__title{
     font-size: x-large;
+    margin: 10px 0 0 0 ;
 }
 
 .card__description{
     text-align: center;
     font-weight: 500;
     font-size: large;
+    
 }

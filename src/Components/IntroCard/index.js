@@ -11,7 +11,7 @@ function IntroCard({cardData}) {
                 <h5 className="card__title">{cardData.title}</h5>
             </div>
             <div className="card__container_lower">
-                <p>
+                <p className="card__description">
                     {cardData.description}
                 </p>
             </div>
