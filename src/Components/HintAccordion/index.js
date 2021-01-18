@@ -37,7 +37,7 @@ export default function HintAccordion({hints}) {
             hints.length ? hints.map((eachhint, index)=>{
             return (
               <div className="hintAccordion__eachAccordion">
-                <Accordion style={{backgroundColor:"rgb(55, 55, 55)", color:" rgb(226, 226, 226)"}} expanded={ expanded === eachhint.id } onChange={handleChange(eachhint.id)}>
+                <Accordion style={{backgroundColor:"#141E30",color:" rgb(226, 226, 226)"}} expanded={ expanded === eachhint.id } onChange={handleChange(eachhint.id)}>
                     <AccordionSummary
                     expandIcon={<ExpandMoreIcon style={{color:"white"}} />}
                     aria-controls="panel1bh-content"

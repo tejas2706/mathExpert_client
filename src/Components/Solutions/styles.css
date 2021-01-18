@@ -6,7 +6,8 @@
     justify-content: center;
     color: #ffffff;
     height: 20vh;
-    background-color: black;
+    background-color: #ddf8d6;
+    border: 3px solid #00071F;
     margin: 5px;
     border-radius: 5px;
     padding: 10px;
@@ -17,7 +18,7 @@
     width: 90%;
     height: 40%;
     border-radius: 5px;
-    background-color: rgb(75, 75, 75);
+    background-color:#141E30;
     border: none;
     box-shadow: 0 0 10px 1px rgb(160, 160, 160);
     -webkit-box-shadow: 0 0 3px 1px rgb(160, 160, 160);
@@ -30,6 +31,7 @@
 
 .solutions__fullSol:hover,
 .solutions__fullVidSol:hover{
-    background-color: gray;
-    color: black;
+    background: #141E30;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2c4868, #0f1c35);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2c4868, #0f1c35);
 }

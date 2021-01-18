@@ -6,10 +6,11 @@
     overflow-y: scroll;
     flex: 2;
     min-width: 300px;
-    color: white;
+    color: black;
     height: 81vh;
     min-height: 300px;
     padding: 10px;
+    border: 5px solid #00031f;
 }
 
 .question__header{
@@ -20,7 +21,7 @@
     justify-content: space-evenly;
     height: 40px;
     width: 100%;
-    background-color: rgb(75, 75, 75);
+    background-color: #000535;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     top: 0;
@@ -47,7 +48,7 @@
 }
 
 .question__speratingLine{
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid black;
     width: 80%;
     align-self: center;
 }
@@ -72,7 +73,7 @@
     font-size: larger;
     margin: 10px;
     cursor: pointer;
-    background-color: rgb(52, 104, 0);
+    background: #141E30;  /* fallback for old browsers */
     color: rgb(235, 235, 235);
     transition: all 0.1s;
     border-radius: 8px;
@@ -82,7 +83,9 @@
 }
 
 .options__submitBtn:hover{
-    background-color: #039900;
+    background: #141E30;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2c4868, #0f1c35);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2c4868, #0f1c35);
 }
 
 .options__title{
@@ -105,7 +108,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    justify-content: center;
     flex-wrap: wrap;
     border: 1px double black;
     border-radius: 5px;
@@ -124,14 +126,23 @@
 }
 
 .options__selectedOption{
-    background-color: rgb(180, 221, 180);
-    /* border: 1px solid white; */
+    background-color: #8db5e4;
+}
+
+.asd{
+    border: 1px solid black;
+    background-color: green;
+    justify-self: flex-start;
+    /* align-self: flex-start; */
+    height: 10px;
+    width: 10px;
+    clip-path: circle(40%);
 }
 
 .options__eachOption:hover{
-    background-color: rgb(72, 72, 72);
-    color: white;
-    border: 1px solid rgb(201, 201, 201);
+    background-color: rgb(136, 136, 136);
+    color: black;
+    border: 1px solid rgb(51, 51, 51);
 }
 
 h3 span{

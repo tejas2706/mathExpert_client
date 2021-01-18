@@ -1,11 +1,33 @@
 .headerPanel__container{
+    display: flex;
+    justify-content: space-between;
     width:100%;
     margin: 5px;
     border: 1px solid black;
-    color: white;
+    color: black;
     padding: 5px;
 }
 
 .headerPanel__title{
     margin: 0;
+    justify-self: flex-start;
+}
+
+.headerPanel__quesBtnGrp{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    min-width:300px;
+}
+
+.headerPanel__quesBtn{
+    background-color: #141E30;
+    color: white;
+    height: 30px;
+    width: 70px;
+    margin: 0 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
 }

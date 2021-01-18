@@ -4,7 +4,8 @@
     justify-content: center;
     flex-wrap: wrap;
     align-items: center;
-    background-color: rgb(102, 102, 102);
+    background: #E0E0E0;
+    color: black;
 }
 
 .questions__innerContainer{
@@ -19,8 +20,8 @@
 
 .questions__quesAndOptions{
     flex: 3;
-    min-width: 300px;
-    background-color: black;
+    min-width: 400px;
+    background-color:  #eef5fc;
     margin: 5px;
     border-radius: 5px;
 }
@@ -30,7 +31,7 @@
     flex-direction: column;
     flex: 1;
     height: 100%;
-    min-width: 200px;
+    min-width: 300px;
 }
 
 .questions__question{

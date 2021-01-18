@@ -9,10 +9,10 @@ import TopicDetails from './Pages/TopicDetails';
 function App() {
   return (
     <div className="app__root">
-      <Navbar />
-      <Home />
-      {/* <Questions /> */}
-      <Footer />
+      {/* <Navbar /> */}
+      {/* <Home /> */}
+      <Questions />
+      {/* <Footer /> */}
     </div>
   );
 }
