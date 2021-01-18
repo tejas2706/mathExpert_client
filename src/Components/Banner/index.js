@@ -40,7 +40,7 @@ function Banner() {
                 </div>
                 <div className="banner_contentBoxes_horizontal">
                     <div className="banner_eachBox red_box">Learn</div>
-                    <DoubleArrowIcon style={{animation:""}}/>
+                    <DoubleArrowIcon />
                     <div className="banner_eachBox yellow_box">Practice</div>
                     <DoubleArrowIcon />
                     <div className="banner_eachBox green_box">Assess</div>

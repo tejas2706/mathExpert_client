@@ -4,11 +4,14 @@
     flex-wrap: wrap-reverse;
     justify-content: space-between;
     align-items: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin: 100px 0;
 }
 
 .examsList__fullList{
-    margin: 100px 0;
     flex: 1;
+    min-width: 300px;
+    margin: 20px 0;
 }
 
 .examsList__description{
@@ -19,13 +22,18 @@
     min-width: 300px;
 }
 
-.examList__details{
+.examList__details,
+.examList__details_initial{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
     width: 70%;
+}
+
+.examList__details_initial{
+    justify-content: flex-start;
 }
 
 .examList__abbr{
@@ -81,6 +89,49 @@
 
 .examsList__eachExamContainer:hover{
     transform: scale(1.08);
+}
+
+.examList__explore{
+    color: green;
+    font-weight: bold;
+    font-size: larger;
+    cursor: pointer;
+    padding-left: 10px;
+    width: fit-content;
+}
+
+.examList__explore:hover{
+    color: blue;
+    transform: scale(1.02);
+}
+
+.curved_arrow_left{
+    transform: rotate(220deg);
+    width: 150px;
+    height: 150px;
+}
+
+.curved_arrow_down{
+    transform: rotate(90deg);
+    width: 150px;
+    height: 150px;
+    display: none;
+    justify-self: center;
+}
+
+@media (max-width: 600px){
+    .curved_arrow_left{
+        display: none;
+    }
+
+    .curved_arrow_down{
+        display: flex;
+    }
+}
+
+.examList__selelctExam{
+    font-size: x-large;
+    text-align: center;
 }
 
 .examList__examNo-0{

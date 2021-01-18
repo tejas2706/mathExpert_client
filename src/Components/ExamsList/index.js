@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import examsList from './examsList';
 import './styles.css';
+import curvedArrw from "../../assets/curved_arrow.png";
 
 
 function ExamsList() {
@@ -21,6 +22,9 @@ function ExamsList() {
                         )
                     })
                 }
+                <div className="examList__explore">
+                    Explore more.. <span className="examList__arrow">⏩</span>
+                </div>
             </div>
             <div className="examsList__description">
                     {
@@ -33,8 +37,10 @@ function ExamsList() {
                             <button className="examList__prepareBtn">Maths Preparation</button>
                         </div>
                         :
-                        <div className="examList__details">
-                            
+                        <div className="examList__details_initial">
+                            <div className="examList__selelctExam">Select from the listed exams to know more about the subjects and prepare for mathematics.</div>
+                            <img className="curved_arrow_left" alt="curved-arrow" src={curvedArrw}></img>
+                            <img className="curved_arrow_down" alt="curved-arrow" src={curvedArrw}></img>
                         </div>
                     }
             </div>
