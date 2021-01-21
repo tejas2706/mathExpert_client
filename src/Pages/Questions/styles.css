@@ -20,7 +20,7 @@
 
 .questions__quesAndOptions{
     flex: 3;
-    min-width: 400px;
+    min-width: 300px;
     background-color:  #eef5fc;
     margin: 5px;
     border-radius: 5px;

@@ -16,8 +16,9 @@
 .headerPanel__quesBtnGrp{
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     align-items: center;
-    width: 30%;
+    /* width: 30%; */
     min-width:300px;
 }
 

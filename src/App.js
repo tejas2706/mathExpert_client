@@ -5,14 +5,16 @@ import Questions from './Pages/Questions';
 import Footer from './Components/Footer'
 import Hexagon from './Components/Hexagon';
 import TopicDetails from './Pages/TopicDetails';
+import Content from './Pages/Content';
 
 function App() {
   return (
     <div className="app__root">
-      {/* <Navbar /> */}
+      <Navbar />
       {/* <Home /> */}
-      <Questions />
-      {/* <Footer /> */}
+      {/* <Questions /> */}
+      <Content />
+      <Footer />
     </div>
   );
 }

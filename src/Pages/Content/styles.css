@@ -1,0 +1,107 @@
+.content__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 150px;
+    padding: 20px;
+}
+
+.content__classDropDown{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: large;
+}
+
+.content__examsDisplay{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.content__selectClass{
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.content__line{
+    width: 90%;
+    border-bottom: 1px solid black;
+    margin: 10px;
+}
+
+.content__exams{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* border: 1px solid black; */
+    width: 80%;
+}
+
+.content__eachExam{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    min-width: 200px;
+    border-radius: 10px;
+    margin: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: large;
+    margin: 50px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 250px;
+    height: 300px;
+    perspective: 1000px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.flip-card-front {
+    background-color: #bbb;
+    color: black;
+}
+
+.flip-card-back {
+    background-color: #2980b9;
+    color: white;
+    transform: rotateY(180deg);
+}
