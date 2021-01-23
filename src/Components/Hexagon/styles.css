@@ -3,6 +3,7 @@
     margin: 0;
     min-width: 124px;
     min-height: 79px;
+    max-height: 79px;
 }
 
 
@@ -10,8 +11,9 @@
     position: absolute;
     border: 1px solid transparent;
     border-radius: 10px;
-    min-width: 100px;
-    min-height: 50px;
+    min-width: 124px;
+    min-height: 79px;
+    max-height: 79px;
 
 }
 
@@ -66,3 +68,17 @@
     Red, salmon); 
 }
 
+
+@media (max-width: 715px){
+    .container{
+        min-width: 90px;
+        min-height: 59px;
+        max-height: 59px;
+    }
+
+    .mainDiv {
+        min-width: 90px;
+        min-height: 59px;
+        max-height: 59px;
+    }
+}

@@ -18,8 +18,25 @@ function Navbar() {
         }
     }, []);
 
+
+    const openNav = () => {
+        document.getElementById("sidenav").style.width = "50%";
+    }
+
+    const closeNav = () => {
+        document.getElementById("sidenav").style.width = 0;
+    }
+
     return (
         <div className={`navbar__container ${navBgShow && "navbar__container_withBg"}`}>
+            <div id="sidenav" className="navbar__sidenav">
+                <a href="javascript:void(0)" className="closebtn" onClick={closeNav}>&times;</a>
+                <h4 className="navbar__item">What is MathsExpert ?</h4>
+                <h4 className="navbar__item">Content</h4>
+                <h4 className="navbar__item">About Us</h4>
+                <h4 className="navbar__item">FAQ's</h4>
+            </div>                
+            <div className="navbar__hamburger" onClick={openNav}>☰</div>
             <h2 className="navbar__title">MathExpert</h2>
             <div className="navbar__items">
                 <h4 className="navbar__item">What is MathsExpert ?</h4>

@@ -30,17 +30,21 @@ function ExamsList() {
                     {
                         selectedExam!==null ? 
                         <div className="examList__details">
-                            <h1 className="examList__abbr">{examsList[selectedExam].abbr}</h1>
-                            <p className="examList__subjects"><span><b>Subjects for the exam: </b></span> {examsList[selectedExam].subjects}</p>
-                            <p className="examList__subjects"><span><b>Languages: </b></span> {examsList[selectedExam].languages}</p>
-                            <p className="examList__subjects"><span><b>Conducted By: </b></span> {examsList[selectedExam].conductedBy}</p>
-                            <button className="examList__prepareBtn">Maths Preparation</button>
+                            <div className="examList__abbr__container">
+                                <h1 className="examList__abbr">{examsList[selectedExam].abbr}</h1>
+                            </div>
+                            <p className="examList__subjects"><span><b>Subjects for the exam: </b></span> {examsList[selectedExam].subjects}</p><br />
+                            <p className="examList__subjects"><span><b>Languages: </b></span> {examsList[selectedExam].languages}</p><br />
+                            <p className="examList__subjects"><span><b>Conducted By: </b></span> {examsList[selectedExam].conductedBy}</p><br />
+                            <div className="examList__abbr__container">
+                                <button className="examList__prepareBtn">Maths Preparation</button>
+                            </div>   
                         </div>
                         :
                         <div className="examList__details_initial">
                             <div className="examList__selelctExam">Select from the listed exams to know more about the subjects and prepare for mathematics.</div>
-                            <img className="curved_arrow_left" alt="curved-arrow" src={curvedArrw}></img>
-                            <img className="curved_arrow_down" alt="curved-arrow" src={curvedArrw}></img>
+                            <img className="curved_arrow" alt="curved-arrow" src={curvedArrw}></img>
+                            {/* <img className="curved_arrow_down" alt="curved-arrow" src={curvedArrw}></img> */}
                         </div>
                     }
             </div>

@@ -6,7 +6,7 @@ import './styles.css'
 function renderSubtopics(subTopics, onSubTopicClick) {
     let subTopicComp = subTopics.map((a) => {
         return (<div className="subTopics__subTopic" onClick={() => onSubTopicClick(a)}>
-            <h2 className="subTopics__subTopicTitle">SubTopic {a}</h2>
+            <h2 className="subTopics__subTopicTitle">Area and Perimeterand abcd and pqrs {a}</h2>
         </div>)
     })
 

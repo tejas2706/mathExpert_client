@@ -1,45 +1,32 @@
-
 .topicDetails__container { 
-    position: relative; 
     width: 100%;
     display: flex;
     justify-content: center; 
     flex-direction: column;
     align-items: center;
-    margin-top: 60px;
+    /* margin-top: 60px; */
     background-color: whitesmoke;
     color: black;
 } 
 
-
-.topicDetails__container::before { 
-    content: ""; 
-    /* background-image: url("/home/murtuza/mathExpert_client/src/assets/blackboard.jpg"); */
-    /* background-size: cover;  */
-    background-repeat: repeat;
-    position: absolute; 
-    top: 0px; 
-    right: 0px; 
-    bottom: 0px; 
-    left: 0px; 
-    opacity: 1; 
-} 
 
 .topicDetails__topicName{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    width: 90%;
+    width: 100%;
     padding: 10px;
+    background-color: #031035;
+    color: white;
 
 }
 
 .topicDetails__subTopicContainer{
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    position: relative; 
+    /* flex-wrap: wrap; */
+    /* position: relative;  */
     /* border: 1px solid black; */
     /* box-shadow: 3px 3px 3px rgba(128,128,128,0.7); */
     width: 100%;
@@ -65,9 +52,9 @@
 
 .topicDetails__questionContainer{
     display: flex;
-    flex: 5;
+    flex: 4;
     flex-direction: column;
-    min-width: 350px;
+    min-width: 300px;
     padding: 10px;
 }
 
@@ -80,6 +67,8 @@
     width: 100%;
     padding: 10px;
     border: 1px solid black;
+    background-color: #031035;
+    color: white;
 }
 
 
@@ -88,29 +77,48 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    height: 60vh;
+    /* height: 100%; */
+    height: 50vh;
     /* min-height: 400px; */
-    padding-top: 30px;
     justify-content: space-evenly;
-    /* align-items: center; */
+    align-items: flex-start;
     border: 1px solid black;
+    /* background: linear-gradient(360deg, gray, white); */
     overflow-y: scroll;
 }
 
+.topicDetails__questions:first-child{
+    margin-left: 0;
+}
 
 .topicDetails__topicTest{
     align-self: center;
+    
 }
 
 .topicDetails__testBtn{
     font-size: x-large;
     font-family: 'Architects Daughter', cursive;
-    background-color: transparent;
     border-radius: 10px;
-    border: 0.5px solid black;
+    /* border: 0.5px solid black; */
     padding: 10px 30px;
     cursor: pointer;
+    background-color:transparent;
+    color: black;
+    box-shadow: 7px 7px 15px rgba(55, 84, 170,.15),
+    -7px -7px 20px rgba(255, 255, 255,1),
+    inset 0px 0px 4px rgba(255, 255, 255,.2); 
+    transition: color .5s, background-color .5s,background-position .5s;
+
 }
+
+.topicDetails__testBtn:hover{
+    background-color: rgb(209, 205, 205);
+    background-position: 0% 100%;
+
+}
+
+
 
 .topicDetails__line {
     width: 85%;
@@ -119,13 +127,9 @@
 }
 
 .hexagon {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    margin: 20px;
-    border: 1px solid black;
+    margin-left: 10px;
     padding: 0px;
+    margin : 40px;
 }
 
 h2{
@@ -134,7 +138,16 @@ h2{
     width: max-content;
 }
 
-@media (max-width: 400px){
+.topicDetails__subTopics__modal_hide {
+    display: none;
+}
+
+.topicDetails__subTopics__modal_show{
+    display: block;
+}
+
+
+@media (max-width: 900px){
     .topicDetails__subTopics {
         display: none;
     }
@@ -149,7 +162,7 @@ h2{
     }
 
     .arrow {
-        border: solid black;
+        border: solid white;
         border-width: 0 3px 3px 0;
         padding: 3px;
       }
@@ -159,6 +172,31 @@ h2{
         -webkit-transform: rotate(45deg);
       }
 
+      .hexagon {
+        margin : 30px;   
+      }
 }
 
 
+.showSubmissions__container{
+    width: 80vw;
+    height: 70vh;
+    background-color: currentColor;
+    overflow-y: scroll;
+}
+
+.sketchFieldComponent__modal_title{
+    position: fixed;
+    width: inherit;
+    margin: 0;
+}
+
+.sketchFieldComponent__modal_title h4{
+    margin: 0;
+}
+
+.subTopics__modal{
+    color: white;
+    overflow-y: scroll;
+    padding-top: 40px;
+}

@@ -30,6 +30,7 @@
     background-color: white;
     padding: 10px;
     height: 150px;
+    box-shadow: 3px 3px 3px gray;
 }
 
 .card__container_lower{
@@ -42,6 +43,7 @@
     background-color: #36B9D7;
     padding: 10px;
     height: 130px;
+    box-shadow: 3px 3px 3px gray;
 }
 
 .card__container:hover{

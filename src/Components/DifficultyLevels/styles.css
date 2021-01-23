@@ -30,5 +30,6 @@
 
 .difficultyLevels__btn:hover{
     color: gray;
-    transform: scale(2);
+    transform: scale(1.2);
+    border-bottom: 1px solid black;
 }

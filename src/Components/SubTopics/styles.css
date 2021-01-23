@@ -4,13 +4,17 @@
     justify-content: center;
     align-items: center;
     opacity: 1;
+    overflow-y: scroll;
+    height: 60vh; 
 }
 
 .subTopics__subTopic{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     padding: 10px 0 0 0;
-    /* color: gray; */
-    color: black;
     cursor: pointer;
+    width: 90%;
 }
 
 .subTopics__subTopic:hover{

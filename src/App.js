@@ -6,15 +6,15 @@ import Footer from './Components/Footer'
 import Hexagon from './Components/Hexagon';
 import TopicDetails from './Pages/TopicDetails';
 import Content from './Pages/Content';
+import QuestionsCard from './Components/QuestionsCard';
 
 function App() {
   return (
     <div className="app__root">
       <Navbar />
-      {/* <Home /> */}
+      <TopicDetails />
+      {/* <Home/> */}
       {/* <Questions /> */}
-      <Content />
-      <Footer />
     </div>
   );
 }

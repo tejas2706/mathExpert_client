@@ -4,7 +4,7 @@
     flex-wrap: wrap-reverse;
     justify-content: space-between;
     align-items: center;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
     margin: 100px 0;
 }
 
@@ -28,7 +28,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     width: 70%;
 }
 
@@ -36,9 +36,15 @@
     justify-content: flex-start;
 }
 
+.examList__abbr__container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
 .examList__abbr{
     color: rgb(2, 2, 121);
-    align-self: center;
+    align-self: flex-end;
     margin: 10px;
 }
 
@@ -105,27 +111,20 @@
     transform: scale(1.02);
 }
 
-.curved_arrow_left{
+.curved_arrow{
     transform: rotate(220deg);
     width: 180px;
     height: 150px;
 }
 
-.curved_arrow_down{
-    transform: rotate(90deg);
-    width: 150px;
-    height: 150px;
-    display: none;
-    justify-self: center;
-}
+
 
 @media (max-width: 600px){
-    .curved_arrow_left{
-        display: none;
-    }
-
-    .curved_arrow_down{
-        display: flex;
+    .curved_arrow{
+        transform: rotate(90deg);
+        width: 150px;
+        height: 150px;
+        justify-self: center;
     }
 }
 

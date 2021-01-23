@@ -13,7 +13,7 @@ const examsList = [
         "fullForm": "National Level Science Talent Search Exam",
         "subjects": "Maths, Physics, Chemistry, Biology, General Questions",
         "languages": "English",
-        "conductedBy": "Unified Council"
+        "conductedBy": "Unified Council of India"
     },
     {
         "id":"3",

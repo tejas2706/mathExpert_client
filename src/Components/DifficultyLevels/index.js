@@ -4,10 +4,13 @@ import './styles.css';
 
 const temp_questions = {
     "easy": ["EASY ipsum dolor sit amet",
+     "EASY consectetur adipiscing elit", "EASY Quisque nisl eros,pulvinar", "EASY aucto consequat urna. Morbi a bibendum metus", "enim eu venenatis","EASY ipsum dolor sit amet",
+     "EASY consectetur adipiscing elit", "EASY Quisque nisl eros,pulvinar", "EASY aucto consequat urna. Morbi a bibendum metus", "enim eu venenatis","EASY ipsum dolor sit amet",
+     "EASY consectetur adipiscing elit", "EASY Quisque nisl eros,pulvinar", "EASY aucto consequat urna. Morbi a bibendum metus", "enim eu venenatis","EASY ipsum dolor sit amet",
+     "EASY consectetur adipiscing elit", "EASY Quisque nisl eros,pulvinar", "EASY aucto consequat urna. Morbi a bibendum metus", "enim eu venenatis","EASY ipsum dolor sit amet",
      "EASY consectetur adipiscing elit", "EASY Quisque nisl eros,pulvinar", "EASY aucto consequat urna. Morbi a bibendum metus", "enim eu venenatis"],
 
-    "medium":["MEDIUM ipsum dolor sit amet",
-    "MEDIUM consectetur adipiscing elit", "MEDIUM Quisque nisl eros,pulvinar", "MEDIUM aucto consequat urna. Morbi a bibendum metus", "enim eu venenatis"],
+    "medium":["MEDIUM ipsum dolor sit amet"],
 
     "hard": ["HARD ipsum dolor sit amet",
     "HARD consectetur adipiscing elit", "Quisque nisl eros,pulvinar", "aucto consequat urna. Morbi a bibendum metus", "enim eu venenatis"]
