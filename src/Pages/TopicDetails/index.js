@@ -103,12 +103,14 @@ function TopicDetails() {
   return (
 
     <div className="topicDetails__container">
-      <div className="topicDetails__subTopicContainer">
+      {/* <div className="topicDetails__subTopicContainer"> */}
         <div className="topicDetails__subTopics">
           <div className="topicDetails__topicName">
             <h1>Topic Name</h1>
           </div>
-          <SubTopics subTopics={array} onSubTopicClick={onSubTopicClick} />
+          <div className="topicDetails__listSubTopics">
+            <SubTopics subTopics={array} onSubTopicClick={onSubTopicClick} />
+          </div>
         </div>
         <div className="topicDetails__questionContainer">
           <DifficultyLevels selectedSubTopic={subTopic} handleDifficultyLevelChange={handleDifficultyLevelChange} />
@@ -132,7 +134,7 @@ function TopicDetails() {
           {modal()}
         </div>
       {/* </div> */}
-      </div>
+      {/* </div> */}
     </div>
   );
 

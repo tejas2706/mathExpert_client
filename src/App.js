@@ -11,7 +11,7 @@ import QuestionsCard from './Components/QuestionsCard';
 function App() {
   return (
     <div className="app__root">
-      <Navbar />
+      {/* <Navbar /> */}
       <TopicDetails />
       {/* <Home/> */}
       {/* <Questions /> */}
