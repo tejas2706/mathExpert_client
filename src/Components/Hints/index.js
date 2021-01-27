@@ -1,10 +1,11 @@
 import React, {useState} from 'react';
 import HintAccordion from '../HintAccordion';
 import './styles.css';
+import EmojiObjectsOutlinedIcon from '@material-ui/icons/EmojiObjectsOutlined';
+import SketchFieldComponent from '../../Components/SketchFieldComponent';
 
 function Hints() {
 
-    const [hints, sethints] = useState([]);
     const allHints=[
         {
             "id": "hint1",
@@ -15,23 +16,18 @@ function Hints() {
             "hint": "Try to multiple 5 by itself 4 times."
         }
      ];
-    
-    // const getHint = async () => {
-    //     //Make api call to get the hints.
-    //     let index = hints.length;
-    //     sethints([...hints,allHints[index]]);
-    // }
 
     return (
         <div className="hints__container">
             <div className="hints__hints">
                 <div className="hints__hintsTitile">
-                    <div className="hints__hintsBtn">Hints ↯</div>
-                    <span className="hints__titileDescription">Try enough before diving into the hints and solutions.</span>
+                    <div className="hints__hintsBtn">Hints <EmojiObjectsOutlinedIcon style={{margin:"0 10px"}}/></div>                    
+                    <SketchFieldComponent />
+                    {/* <span className="hints__titileDescription">Try enough before diving into the hints and solutions.</span> */}
                 </div>
-                <div className="hints__displayHints">
+                {/* <div className="hints__displayHints">
                     <HintAccordion hints={allHints}/>
-                </div>
+                </div> */}
             </div>
         </div>
     )

@@ -97,7 +97,7 @@ function SketchFieldComponent() {
 
     return (
         <div className="sketchFieldComponenet__container">
-            <button onClick={handleOpen} className="sketchFieldComponenet__scratchPadBtn">Scratch <CreateIcon /></button>
+            <button onClick={handleOpen} className="sketchFieldComponenet__scratchPadBtn">White Board</button>
             <button onClick={handleOpenSolutions} className="sketchFieldComponenet__scratchPadBtn">Submissions</button>
             {
                 scratchPad ? 

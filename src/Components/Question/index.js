@@ -10,9 +10,11 @@ function Question({ data, submitAns, options }) {
     return (
         <div>
             <div className="question__header">
-                <h4>Topic : {data.topic}</h4>
-                <h4>Sub Topic : {data.subTopic}</h4>
-                <h4>Difficulty : {data.difficulty}</h4>
+                <div className="question__header_inner">
+                    <h4>Topic : {data.topic}</h4>
+                    <h4>Sub Topic : {data.subTopic}</h4>
+                    <h4>Difficulty : {data.difficulty}</h4>
+                </div>
             </div>
             {/* /Question number and the question itself. */}
             <div className="question__container">

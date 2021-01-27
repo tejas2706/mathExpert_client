@@ -6,6 +6,7 @@ import Solutions from '../../Components/Solutions';
 import HeaderPanel from '../../Components/HeaderPanel';
 import './styles.css';
 import SketchFieldComponent from '../../Components/SketchFieldComponent';
+import QuestionsBlock from '../../Components/QuestionsBlock';
 
 function Questions() {
 
@@ -23,8 +24,8 @@ function Questions() {
                     <Question data={question} options={question.options} submitAns={submitAns}/>
                 </div>
                 <div className="questions__hintsAndSolutions">
+                    <QuestionsBlock />
                     <Hints />
-                    <SketchFieldComponent />
                     <Solutions />
                 </div>
             </div>

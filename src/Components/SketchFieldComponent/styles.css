@@ -2,13 +2,11 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    /* align-items: center; */
     justify-content: space-between;
-    height: 10vh;
+    height: 7vh;
     background-color: transparent;
-    margin: 5px;
-    border-radius: 5px;
-    padding: 10px;
+    width: 100%;
+    margin: 10px 0;
 }
 
 .sketchFieldComponent__modal{
@@ -34,26 +32,25 @@
     align-items: center;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    width: 45%;
+    flex: 1;
+    /* width: 45%; */
     cursor: pointer;
     border: none;
     border-radius: 3px;
     font-size: medium;
-    background-color: #141E30;
+    background-color: #20304e;
     border: none;
     box-shadow: 0 0 10px 1px rgb(160, 160, 160);
     -webkit-box-shadow: 0 0 3px 1px rgb(160, 160, 160);
     -moz-box-shadow: 0 0 3px 1px #fff;
     cursor: pointer;
-    font-weight: bold;
     color: whitesmoke;
-    max-height: 40px;
+    max-height: 35px;
+    margin: 0 5px;
 }
 
 .sketchFieldComponenet__scratchPadBtn:hover{
-    background: #141E30;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #2c4868, #0f1c35);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #2c4868, #0f1c35);
+    background: #0b1220;
 }
 
 .showSubmissions__container{

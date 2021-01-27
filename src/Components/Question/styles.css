@@ -10,25 +10,62 @@
     height: 81vh;
     min-height: 300px;
     padding: 10px;
-    border: 5px solid #00031f;
+    border-bottom: 5px solid #00031f;
+    border-left: 5px solid #00031f;
+    border-right: 5px solid #00031f;
 }
 
 .question__header{
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     height: 40px;
     width: 100%;
     background-color: #000535;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     top: 0;
-    padding: 0 10px;
-    color: white;
+    color: black;
     font-weight: bold;
+    padding: 5px;
 }
+
+.question__header_inner{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0 10px;
+    width: 95%;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: #7edafc;
+    /* border: 5px solid white; */
+}
+
+
+
+.btn-grad {background-image: linear-gradient(to right, #16222A 0%, #3A6073  51%, #16222A  100%)}
+.btn-grad {
+   margin: 10px;
+   padding: 15px 45px;
+   text-align: center;
+   text-transform: uppercase;
+   transition: 0.5s;
+   background-size: 200% auto;
+   color: white;            
+   box-shadow: 0 0 20px #eee;
+   border-radius: 10px;
+   display: block;
+ }
+
+ .btn-grad:hover {
+   background-position: right center; /* change the direction of the change here */
+   color: #fff;
+   text-decoration: none;
+ }
+
+
 
 .question__header h4{
     margin: 0;
@@ -73,19 +110,20 @@
     font-size: larger;
     margin: 10px;
     cursor: pointer;
-    background: #141E30;  /* fallback for old browsers */
+    background: rgb(34,139,34);
     color: rgb(235, 235, 235);
     transition: all 0.1s;
     border-radius: 8px;
     padding:10px;
     width: 200px;
     border: none;
+    /* transition: 0.5s; */
+
 }
 
 .options__submitBtn:hover{
-    background: #141E30;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #2c4868, #0f1c35);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #2c4868, #0f1c35);
+    background: rgb(50,205,50);
+    color: rgba(12, 25, 51, 1);
 }
 
 .options__title{
