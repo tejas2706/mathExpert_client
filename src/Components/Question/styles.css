@@ -43,45 +43,33 @@
     /* border: 5px solid white; */
 }
 
-
-
-.btn-grad {background-image: linear-gradient(to right, #16222A 0%, #3A6073  51%, #16222A  100%)}
-.btn-grad {
-   margin: 10px;
-   padding: 15px 45px;
-   text-align: center;
-   text-transform: uppercase;
-   transition: 0.5s;
-   background-size: 200% auto;
-   color: white;            
-   box-shadow: 0 0 20px #eee;
-   border-radius: 10px;
-   display: block;
- }
-
- .btn-grad:hover {
-   background-position: right center; /* change the direction of the change here */
-   color: #fff;
-   text-decoration: none;
- }
-
-
-
 .question__header h4{
     margin: 0;
 }
 
-.question__qNumAndQues{
+.question__qNumAndQues,
+.question__Q{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
-    /* border: 1px solid white; */
+    /* border: 1px solid black; */
+    width: 100%;
+}
+
+.question__QNo{
+    font-size: xx-large;
+    align-self: flex-start;
+    /* border: 1px solid black; */
+    width: max-content;
+
 }
 
 .question__Q{
-    font-size: xx-large;
-    align-self: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+    /* border: 1px solid black; */
+    overflow-x: hidden;
 }
 
 .question__speratingLine{
@@ -94,8 +82,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    /* border: 1px solid white; */
+    justify-content: flex-end;
+    /* border: 1px solid black; */
+    width: 100%;
+    height: 100%;
 }
 
 .options__btnGrp{
@@ -142,7 +132,9 @@
 }
 
 .options__eachOption,
-.options__selectedOption{
+.options__selectedOption,
+.options__correctAnswer,
+.options__incorrectAnswer{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -186,4 +178,25 @@
 h3 span{
     font-weight: bold;
     font-size: larger;
+}
+
+.options__correctAnswer{
+    translate: ;
+    background-color: rgb(66, 184, 50);
+    animation: blink 1s infinite
+}
+
+
+@keyframes blink {
+    0%, 49% {
+      background-color: rgb(66, 184, 50);
+      border: 3px solid rgb(117, 209, 63);
+    }
+    50%, 100% {
+      background-color: white;
+      border: 3px solid rgb(117, 209, 63);
+    }
+  }
+.options__incorrectAnswer{
+    background-color: rgb(204, 14, 33);
 }
