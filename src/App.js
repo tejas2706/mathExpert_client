@@ -7,6 +7,8 @@ import Hexagon from './Components/Hexagon';
 import TopicDetails from './Pages/TopicDetails';
 import Content from './Pages/Content';
 import QuestionsCard from './Components/QuestionsCard';
+import QuizQuestion from './Components/QuizQuestion';
+import Quiz from './Pages/Quiz';
 
 function App() {
   return (
@@ -14,9 +16,11 @@ function App() {
       {/* <Navbar /> */}
       {/* <TopicDetails /> */}
       {/* <Home/> */}
-      <Questions />
+      {/* <Questions /> */}
       {/* <Quiz /> */}
       {/* <Footer /> */}
+      {/* <QuizQuestion /> */}
+      <Quiz />
     </div>
   );
 }

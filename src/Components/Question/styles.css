@@ -181,7 +181,6 @@ h3 span{
 }
 
 .options__correctAnswer{
-    translate: ;
     background-color: rgb(66, 184, 50);
     animation: blink 1s infinite
 }
