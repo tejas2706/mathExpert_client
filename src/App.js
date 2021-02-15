@@ -13,14 +13,14 @@ import Quiz from './Pages/Quiz';
 function App() {
   return (
     <div className="app__root">
-      {/* <Navbar /> */}
+      <Navbar />
       {/* <TopicDetails /> */}
       {/* <Home/> */}
       {/* <Questions /> */}
       {/* <Quiz /> */}
-      {/* <Footer /> */}
       {/* <QuizQuestion /> */}
       <Quiz />
+      <Footer />
     </div>
   );
 }
