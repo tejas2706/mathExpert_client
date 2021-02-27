@@ -17,23 +17,24 @@ function App() {
   return (
     <Router>
       <div className="app__root">
-      {/* <Switch>
+      <Navbar />
+      <Switch>
         <Route path="/" exact component={Home}/>
         <Route path="/topicDetails" component={TopicDetails}/>
         <Route path="/questions" component={Questions}/>
         <Route path="/quizResult" component={QuizResult}/>
         <Route path="/quiz" component={Quiz}/>
-        <Route path="/" component={Home}/>
-      <QuizResult />
-      </Switch> */}
-      {/* <Navbar /> */}
+        <Route path="/aboutUs" component={AboutUs}/>
+        <Route path="/content" component={Content}/>
+      </Switch>
+      <Footer />
+      {/* <QuizResult /> */}
       {/* <Home/> */}
       {/* <Questions /> */}
       {/* <Quiz /> */}
       {/* <QuizQuestion /> */}
       {/* <Quiz /> */}
-      {/* <Footer /> */}
-      <AboutUs />
+      {/* <AboutUs /> */}
     </div>
     </Router>
   );
