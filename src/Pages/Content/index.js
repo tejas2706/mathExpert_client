@@ -7,8 +7,7 @@ import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import './styles.css';
 import classesAndExams from'./classesAndExams';
-import { RecentActorsSharp } from '@material-ui/icons';
-
+import ArrowRightIcon from '@material-ui/icons/ArrowRight';
 
 const useStyles = makeStyles((theme) => ({
   formControl: {
@@ -23,8 +22,15 @@ const useStyles = makeStyles((theme) => ({
 export default function Content() {
   const classes = useStyles();
   const [std, setstd] = useState(classesAndExams[0].class);
-  console.log("🚀 ~ file: index.js ~ line 26 ~ Content ~ std", classesAndExams.filter((each)=>each.class==std))
 
+  const topics = {
+    "Algebra":["Fractions", "Decimal Fractions", "Squares and Square Roots", "Average", "Indices", "Ration and Proportions",
+                "Percentage", "Profit and loss", "SI and CI", "Time, speed and Distance", "SI and CI", "Time, speed and Distance"],
+    "Geometry":["Angles", "Polygons", "Perimeter and area of different Shapes", "Volume and Surface Area", "Circles"],
+    "Geome1try":["Angles", "Polygons", "Perimeter and area of different Shapes", "Volume and Surface Area", "Circles"],
+    "Geome1tory":["Angles", "Polygons", "Perimeter and area of different Shapes", "Volume and Surface Area", "Circles"],
+    "Geome1trpy":["Angles", "Polygons", "Perimeter and area of different Shapes", "Volume and Surface Area", "Circles"]
+  }
   const handleChange = (event) => {
     setstd(event.target.value);
   };
@@ -59,19 +65,43 @@ export default function Content() {
                         return(
                             <div className={`content__eachExam content_examExam_${index}`}>
                                 <div class="flip-card">
-                                    <div class="flip-card-inner">
+                                    {eachExam}
+                                    {/* <div class="flip-card-inner">
                                         <div class="flip-card-front">
                                             {eachExam}
                                         </div>
                                         <div class="flip-card-back">
                                             Show exam details here..
                                         </div>
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
                         )
                     })
                 }
+            </div>
+            <div className="content__topicTitle">Maths preparation for the above exams for class {std}</div>
+            {/* <div className="content__line"></div> */}
+            <div className="content__topics">
+                {
+                    Object.keys(topics).map((eachTopic, index)=>{
+                        return(
+                            <div className={`content__eachTopic content__eachTopic_${index%4}`}>
+                                <h3 className="content__eachTopic_title">{eachTopic}</h3>
+                                {
+                                    topics[eachTopic].map((each)=>{
+                                        return(
+                                            <div className="content_topic">
+                                                <ArrowRightIcon /> &nbsp;{each}
+                                            </div>
+                                        )
+                                    })
+                                }
+                            </div>
+                        )
+                    })
+                }
+
             </div>
         </div>
     </div>

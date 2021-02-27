@@ -40,22 +40,18 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    /* border: 1px solid black; */
-    width: 80%;
+    width: 100%;
 }
 
 .content__eachExam{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 300px;
-    min-width: 200px;
     border-radius: 10px;
-    margin: 10px;
     cursor: pointer;
     font-weight: bold;
     font-size: large;
-    margin: 50px;
+    margin: 10px;
 }
 
 body {
@@ -63,10 +59,14 @@ body {
 }
 
 .flip-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     background-color: transparent;
-    width: 250px;
-    height: 300px;
-    perspective: 1000px;
+    width: 150px;
+    height: 50px;
+    border: 1px solid;
 }
 
 .flip-card-inner {
@@ -104,4 +104,96 @@ body {
     background-color: #2980b9;
     color: white;
     transform: rotateY(180deg);
+}
+
+.content__topicTitle{
+    align-self: flex-start;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.content__topics{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    /* border: 1px solid black; */
+}
+
+.content__eachTopic{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    /* border: 1px solid green; */
+    margin: 10px;
+    width: 25%;
+    min-width: 250px;
+    height: 300px;
+    padding: 10px;
+    overflow-x: scroll;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 1px rgb(160, 160, 160);
+    -webkit-box-shadow: 0 0 10px 1px rgb(160, 160, 160);
+    -moz-box-shadow: 0 0 10px 1px #fff;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.content__eachTopic:hover{
+    transform: scale(1.03);
+}
+
+.content__eachTopic_title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    width: 90%;
+    background-color: rgb(39, 39, 39);
+    color: white;
+}
+
+.content_topic{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: large;
+    font-weight: 500;
+}
+
+.content__eachTopic_0{
+    background-color: rgb(216, 255, 255);
+}
+
+.content__eachTopic_1{
+    background-color: rgb(255, 190, 190);
+}
+
+.content__eachTopic_2{
+    background-color: rgb(177, 255, 177);
+}
+
+.content__eachTopic_3{
+    background-color: rgb(255, 255, 167);
+}
+
+.content__eachTopic_0:hover{
+    background-color: rgb(64, 255, 255);
+}
+
+.content__eachTopic_1:hover{
+    background-color: rgb(255, 94, 94);
+}
+
+.content__eachTopic_2:hover{
+    background-color: rgb(108, 255, 108);
+}
+
+.content__eachTopic_3:hover{
+    background-color: rgb(255, 255, 71);
 }

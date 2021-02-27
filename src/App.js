@@ -26,6 +26,7 @@ function App() {
         <Route path="/quiz" component={Quiz}/>
         <Route path="/aboutUs" component={AboutUs}/>
         <Route path="/content" component={Content}/>
+        <Route path="/quizResult" component={QuizResult}/>
       </Switch>
       <Footer />
       {/* <QuizResult /> */}
