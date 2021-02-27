@@ -23,7 +23,71 @@
 }
 
 .quiz__content{
-    width: 90%;
+    /* width: 90%; */
+    display: flex;
+    flex-direction: column;
+    flex: 4
+}
+
+.quiz__questionBlock{
+    flex: 1;
+}
+
+.quiz__contentContainer{
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+}
+
+
+.quiz__questionsBlock__container{
+    display: flex;
+    flex-direction: column;
+    background-color: #EEF5FC;
+    border: 1px solid #00071F;
+    margin: 10px;
+    border-radius: 5px;
+    padding: 10px;
+    min-width: 100px;
+}
+
+.quiz__questionsBlock__questions{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    border: 0.5px solid rgb(162, 162, 162);
+    height: 100%;
+    border-radius: 10px;
+    background-color: white;
+    padding: 10px;
+    margin: 5px;
+    gap: 1px 10px;
+}
+
+.quiz__questionsBlock__eachQues{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: larger;
+    font-weight: bold;
+    color: white;
+    height: 40px;
+    width: 40px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: gray;
+}
+
+.quiz__questionsBlock_eachQues_answered{
+    border: 1px solid darkgreen;
+    background-color: green;
+}
+
+.quiz__questionsBlock__eachQues:hover{
+    background-color: rgb(198, 255, 198);
+    color: black;
 }
 
 .quiz__eachQuestion{
@@ -33,4 +97,30 @@
     margin: 10px 0;
     align-items: center;
     justify-content: center;
+}
+
+.quiz__submit{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+    margin: 10px 0 10px 0;
+    
+}
+
+.quiz__submitBtn{
+    font-size: large;
+    font-family: 'Architects Daughter', cursive;
+    border-radius: 10px;
+    padding: 5px 0;
+    width: 20%;
+    min-width: 100px;
+    cursor: pointer;
+    background-color:transparent;
+    color: black;
+}
+
+.quiz__submitBtn:hover{
+    background-color:rgb(220, 217, 217);
 }

@@ -36,6 +36,10 @@
     border-radius: 10px;
 }
 
+.quizQuestion_optionSelected{
+    background-color: chartreuse;
+}
+
 .quizQuestion__eachOption:hover{
     background-color: rgb(216, 215, 215);
     color: black;
@@ -43,9 +47,6 @@
     cursor: pointer;
 }
 
-.quizQuestion__eachOption:active{
-    background-color: rgb(33, 218, 33);
-}
 
 .quizQuestion__eachOption:last-child{
     margin-bottom: 10px ;
