@@ -1,4 +1,4 @@
-.navbar__container{
+.navbar__container {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -14,29 +14,26 @@
     transition: all 0.5s;
 }
 
-.navbar__container_withBg{
+.navbar__container_withBg {
     background-color: black;
     color: white;
     z-index: 1;
 }
 
-.navbar__title{
+.navbar__title {
     /* color: white; */
     margin: 10px 20px;
     font-size: xx-large;
     cursor: pointer;
 }
 
-.navbar__title:hover{
+.navbar__title:hover {}
 
-}
-
-.navbar__hamburger{
+.navbar__hamburger {
     display: none;
 }
 
-
-.navbar__items{
+.navbar__items {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -45,14 +42,14 @@
     /* width: ; */
 }
 
-.navbar__item{
+.navbar__item {
     margin: 10px;
     /* color: white; */
     font-size: large;
     cursor: pointer;
 }
 
-.navbar__loginBtn{
+.navbar__loginBtn {
     margin: 0 20px;
     padding: 5px 15px;
     border-radius: 8px;
@@ -62,18 +59,16 @@
     border: 1px solid black;
 }
 
-.navbar__loginBtn:hover{
+.navbar__loginBtn:hover {
     color: rgb(255, 255, 255);
     background-color: black;
-    border:1px solid white;
+    border: 1px solid white;
 }
 
-
-@media (max-width: 900px){
-    .navbar__items{
+@media (max-width: 900px) {
+    .navbar__items {
         display: none;
     }
-
     .navbar__hamburger {
         display: block;
         font-size: xx-large;
@@ -81,7 +76,6 @@
         cursor: pointer;
     }
 }
-
 
 .navbar__sidenav {
     height: 100%;
@@ -95,23 +89,88 @@
     transition: 0.5s;
     padding-top: 60px;
     color: white;
-  }
-  
-  .navbar__sidenav h4 a {
+}
+
+.navbar__sidenav h4 a {
     padding: 10px 10px 10px 10px;
     text-decoration: none;
     font-size: 25px;
     transition: 0.3s;
-  }
-  
-  .navbar__sidenav h4:hover {
+}
+
+.navbar__sidenav h4:hover {
     color: #f1f1f1;
-  }
-  
-  .navbar__sidenav .closebtn {
+}
+
+.navbar__sidenav .closebtn {
     position: absolute;
     top: 0;
     right: 25px;
     font-size: 36px;
     margin-left: 50px;
-  }
+}
+
+.authentincation_modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+}
+
+.authentincation_modal_container {
+    width: 50%;
+    min-width: 250px;
+    height: 70%;
+    background-color: whitesmoke;
+    display: flex;
+    background-color: rgb(28, 27, 27);
+    /* background-color: #403E56; */
+    color: white;
+    border-radius: 15px;
+    flex-direction: column;    
+}
+
+.authentincation_modal_tab {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 10px;
+}
+
+.authentincation_modal_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 2;
+}
+
+.authentincation_modal_google {
+    background-color: red;
+    color: white;
+    width: 60%;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.authentincation_modal_facebook{
+    background-color: blue;
+    color: white;
+    width: 60%;
+    padding: 10px;
+    text-align: center;
+    margin-top: 10px;
+
+}
+
+@media (max-width: 750px){
+    .authentincation_modal_container{
+        flex-direction: column;
+    }
+}
+
+
