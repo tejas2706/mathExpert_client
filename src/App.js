@@ -11,15 +11,17 @@ import QuizQuestion from './Components/QuizQuestion';
 import Quiz from './Pages/Quiz';
 import QuizResult from './Pages/QuizResult';
 import AboutUs from './Pages/AboutUs';
+import Profile from './Pages/Profile';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 function App() {
   return (
     <Router>
       <div className="app__root">
-      <Navbar />
+      {/* <Navbar /> */}
       <Switch>
-        <Route path="/" exact component={Home}/>
+        <Route path="/" component={Profile}/>
+        <Route path="/asd" exact component={Home}/>
         <Route path="/topicDetails" component={TopicDetails}/>
         <Route path="/questions" component={Questions}/>
         <Route path="/quizResult" component={QuizResult}/>
@@ -28,7 +30,7 @@ function App() {
         <Route path="/content" component={Content}/>
         <Route path="/quizResult" component={QuizResult}/>
       </Switch>
-      <Footer />
+      {/* <Footer /> */}
       {/* <QuizResult /> */}
       {/* <Home/> */}
       {/* <Questions /> */}
