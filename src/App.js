@@ -12,6 +12,7 @@ import Quiz from './Pages/Quiz';
 import QuizResult from './Pages/QuizResult';
 import AboutUs from './Pages/AboutUs';
 import Profile from './Pages/Profile';
+import FAQ from './Pages/FAQ';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
         <Route path="/aboutUs" component={AboutUs}/>
         <Route path="/content" component={Content}/>
         <Route path="/quizResult" component={QuizResult}/>
+        <Route path="/faq" component={FAQ}/>
       </Switch>
       {/* <Footer /> */}
       {/* <QuizResult /> */}

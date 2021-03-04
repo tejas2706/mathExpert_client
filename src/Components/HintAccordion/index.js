@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
   },
   heading: {
     fontSize: theme.typography.pxToRem(15),
-    flexBasis: '33.33%',
+    flexBasis: '70.33%',
     flexShrink: 0,
   }
   // secondaryHeading: {
@@ -34,21 +34,21 @@ export default function HintAccordion({hints}) {
   return (
     <div className={classes.root}>
         {
-            hints.length ? hints.map((eachhint, index)=>{
+            hints.length ? hints.map((each, index)=>{
             return (
               <div className="hintAccordion__eachAccordion">
-                <Accordion style={{backgroundColor:"#141E30",color:" rgb(226, 226, 226)"}} expanded={ expanded === eachhint.id } onChange={handleChange(eachhint.id)}>
+                <Accordion style={{backgroundColor:"#141E30",color:" rgb(226, 226, 226)"}} expanded={ expanded === each.id } onChange={handleChange(each.id)}>
                     <AccordionSummary
                     expandIcon={<ExpandMoreIcon style={{color:"white"}} />}
                     aria-controls="panel1bh-content"
                     id="panel1bh-header"
                     >
-                    <Typography className={classes.heading}>Hint {index+1}</Typography>
+                    <Typography className={classes.heading}>{index + each.title}</Typography>
                     {/* <Typography className={classes.secondaryHeading}>I am an accordion</Typography> */}
                     </AccordionSummary>
                     <AccordionDetails>
                     <Typography>
-                      <b>{eachhint.hint}</b>
+                      <b>{each.expandedText}</b>
                     </Typography>
                     </AccordionDetails>
                 </Accordion>

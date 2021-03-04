@@ -63,7 +63,7 @@ function Navbar() {
                 <h4 className="navbar__item">What is MathsExpert ?</h4>
                 <h4 className="navbar__item"><Link to="/content">Content</Link></h4>
                 <h4 className="navbar__item"><Link to="/aboutUs">About Us</Link></h4>
-                <h4 className="navbar__item">FAQ's</h4>
+                <h4 className="navbar__item"><Link to="/faq">FAQ's</Link></h4>
             </div>
             <button className="navbar__loginBtn" onClick={onModalClick} >Login</button>
             { open &&
