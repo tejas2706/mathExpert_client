@@ -1,0 +1,84 @@
+.createQuestion__container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.createQuestion__innercontainer{
+    width: 80%;
+    background-color: rgb(100, 100, 100);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    color: white;
+    font-size: x-large;
+}
+
+.createQuestion__questionBlock{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.createQuestion__question{
+    max-width: 100%;
+    height: 100px;
+    font-size: large;
+}
+
+.createQuestions__options{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+
+.createQuestion__option{
+    margin: 5px;
+    height: 40px;
+    font-size: medium;
+}
+
+.createQuestion__correctoption{
+    
+}
+
+.createQuestion__displaybox{
+    background-color: aliceblue;
+    color: black;
+    padding: 10px;
+}
+
+.createQuestion__optionsDisp{
+    flex: 1;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+.createQuestions__fileUpload{
+    font-size: large;
+}
+
+.createQuestion__optionsAndImgDisp{
+    display: flex;
+}
+
+.createQuestion__quesImageDisp{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0 10px 0;
+}
+
+.createQuestion__displaybox > div > img{
+    height: 250px;
+    width: 250px;
+    align-self: center;
+}
+
+.saveImageBtn{
+    font-size: large;
+    margin: 10px;
+    padding: 5px;
+}

@@ -21,9 +21,9 @@ function App() {
       <div className="app__root">
       {/* <Navbar /> */}
       <Switch>
-        <Route path="/" component={Profile}/>
+        <Route path="/profile" component={Profile}/>
         <Route path="/asd" exact component={Home}/>
-        <Route path="/topicDetails" component={TopicDetails}/>
+        <Route path="/" component={TopicDetails}/>
         <Route path="/questions" component={Questions}/>
         <Route path="/quizResult" component={QuizResult}/>
         <Route path="/quiz" component={Quiz}/>

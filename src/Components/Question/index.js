@@ -37,7 +37,7 @@ function Question({ data, submitAns, options }) {
                 </div>
                 {
                     data.imageUrl ?
-                        <img src={data.imageUrl}></img>
+                        <img alt="asd" src={data.imageUrl}></img>
                         :
                         null
                 }
@@ -46,30 +46,30 @@ function Question({ data, submitAns, options }) {
                     <h4 className="options__title">Choose one from the below <span>↓</span> </h4>
 
                     <div className="options__allOptions">
-                    {submittedAnswer ?
+                        {submittedAnswer ?
 
-                        answer == submittedAnswer ?
-                        <div className="options__allOptions">
-                            <div className="options__correctAnswer">
-                                {options[selected]}
-                            </div>
-                        </div>
+                            answer === submittedAnswer ?
+                                <div className="options__allOptions">
+                                    <div className="options__correctAnswer">
+                                        {options[selected]}
+                                    </div>
+                                </div>
+                                :
+
+                                <div>
+                                    <div className="options__incorrectAnswer">
+                                        {options[selected]}
+                                    </div>
+                                    <div className="options__correctAnswer">
+                                        {answer}
+                                    </div>
+                                </div>
                             :
+                            <>
 
-                            <div>
-                                <div className="options__incorrectAnswer">
-                                    {options[selected]}
-                                </div>
-                                <div className="options__correctAnswer">
-                                    {answer}
-                                </div>
-                            </div>
-                        :
-                        <>
-                           
                                 {
                                     options.map((each, index) => {
-                                        let classOfOption = index == selected ? "options__selectedOption" : "options__eachOption"
+                                        let classOfOption = index === selected ? "options__selectedOption" : "options__eachOption"
                                         return (
                                             <div className={classOfOption} onClick={() => setselected(index)}>
                                                 {each}
@@ -77,17 +77,17 @@ function Question({ data, submitAns, options }) {
                                         )
                                     })
                                 }
-                            <div className="options__btnGrp">
-                                <button className="options__submitBtn" type="submit">
-                                    Upload Solution
+                                <div className="options__btnGrp">
+                                    <button className="options__submitBtn" type="submit">
+                                        Upload Solution
                                 </button>
-                                        <button className="options__submitBtn" type="submit" onClick={() => submit()}>
-                                            Submit
+                                    <button className="options__submitBtn" type="submit" onClick={() => submit()}>
+                                        Submit
                                 </button>
-                            </div>
-                        </>
+                                </div>
+                            </>
 
-                    }
+                        }
                     </div>
                 </div>
             </div>
