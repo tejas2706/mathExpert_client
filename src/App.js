@@ -20,11 +20,11 @@ function App() {
   return (
     <Router>
       <div className="app__root">
-      {/* <Navbar /> */}
+      <Navbar />
       <Switch>
         <Route path="/profile" component={Profile}/>
-        <Route path="/asd" exact component={Home}/>
-        <Route path="/" component={Login}/>
+        <Route path="/topicDetails" exact component={TopicDetails}/>
+        <Route path="/" exact component={Home}/>
         <Route path="/questions" component={Questions}/>
         <Route path="/quizResult" component={QuizResult}/>
         <Route path="/quiz" component={Quiz}/>
@@ -32,6 +32,7 @@ function App() {
         <Route path="/content" component={Content}/>
         <Route path="/quizResult" component={QuizResult}/>
         <Route path="/faq" component={FAQ}/>
+        <Route path="/login" exact component={Login}/>
       </Switch>
       {/* <Footer /> */}
       {/* <QuizResult /> */}

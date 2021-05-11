@@ -65,7 +65,7 @@ function Navbar() {
                 <h4 className="navbar__item"><Link to="/aboutUs">About Us</Link></h4>
                 <h4 className="navbar__item"><Link to="/faq">FAQ's</Link></h4>
             </div>
-            <button className="navbar__loginBtn" onClick={onModalClick} >Login</button>
+            <Link to="/login"><button className="navbar__loginBtn" >Login</button></Link>
             { open &&
                 <div>
                     <Modal
