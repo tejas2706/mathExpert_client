@@ -13,6 +13,7 @@ import QuizResult from './Pages/QuizResult';
 import AboutUs from './Pages/AboutUs';
 import Profile from './Pages/Profile';
 import FAQ from './Pages/FAQ';
+import Login from './Pages/Login';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 function App() {
@@ -23,7 +24,7 @@ function App() {
       <Switch>
         <Route path="/profile" component={Profile}/>
         <Route path="/asd" exact component={Home}/>
-        <Route path="/" component={TopicDetails}/>
+        <Route path="/" component={Login}/>
         <Route path="/questions" component={Questions}/>
         <Route path="/quizResult" component={QuizResult}/>
         <Route path="/quiz" component={Quiz}/>

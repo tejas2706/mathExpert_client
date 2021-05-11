@@ -1,0 +1,82 @@
+.login__container{
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    /* width: 100vw; */
+}
+
+.login__image__section{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    background-color: whitesmoke;
+    align-items: center;
+    justify-content: center;
+}
+
+.login__action__section{
+    display: flex;
+    flex-direction: row;
+    flex: 2;
+    border: 1px solid black;
+    justify-content: center;
+    align-items: center;
+    background: url('../../assets/mathsbackground-removebg-transparent.png');
+}
+
+.login__action__container{
+    display: flex;
+    flex-direction: column;
+    min-width: 230px;
+    border: 1px solid black;
+    background-color: whitesmoke;
+    box-shadow: 3px 3px 3px gray;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    padding: 10px;
+
+    /* height: 50%; */
+}
+
+.login__action__emailInput, .login__action__passwordInput{
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.login__btn{
+    display: flex;
+    min-width: 180px;
+    background-color: indigo;
+    padding: 10px;
+    color: whitesmoke;
+    font-weight: bolder;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 3px 3px 3px gray;
+}
+
+.login__third__party{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.login__via__google{
+    background-color: #DD4B39;
+    border-radius: 0px;
+    box-shadow: none
+
+}
+
+
+@media (max-width: 796px) {
+    .login__image__section{
+        display: none;
+    }.login__action__section{
+        background-size: contain;
+    }
+}
