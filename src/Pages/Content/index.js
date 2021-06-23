@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
@@ -8,6 +8,7 @@ import Select from '@material-ui/core/Select';
 import './styles.css';
 import classesAndExams from'./classesAndExams';
 import ArrowRightIcon from '@material-ui/icons/ArrowRight';
+import service from '../../service/apiService';
 
 const useStyles = makeStyles((theme) => ({
   formControl: {
@@ -21,16 +22,15 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Content() {
   const classes = useStyles();
-  const [std, setstd] = useState(classesAndExams[0].class);
+  const [std, setstd] = useState('6');
+  const [topics, setTopics] = useState(null);
 
-  const topics = {
-    "Algebra":["Fractions", "Decimal Fractions", "Squares and Square Roots", "Average", "Indices", "Ration and Proportions",
-                "Percentage", "Profit and loss", "SI and CI", "Time, speed and Distance", "SI and CI", "Time, speed and Distance"],
-    "Geometry":["Angles", "Polygons", "Perimeter and area of different Shapes", "Volume and Surface Area", "Circles"],
-    "Geome1try":["Angles", "Polygons", "Perimeter and area of different Shapes", "Volume and Surface Area", "Circles"],
-    "Geome1tory":["Angles", "Polygons", "Perimeter and area of different Shapes", "Volume and Surface Area", "Circles"],
-    "Geome1trpy":["Angles", "Polygons", "Perimeter and area of different Shapes", "Volume and Surface Area", "Circles"]
-  }
+  useEffect(() => {
+    service.get(`http://localhost:8000/api/v1/mathexp/contents/?standard=${std}`).then((data)=>{
+        setTopics(data.data.topics)
+    })
+  }, [std])
+
   const handleChange = (event) => {
     setstd(event.target.value);
   };
@@ -84,22 +84,23 @@ export default function Content() {
             {/* <div className="content__line"></div> */}
             <div className="content__topics">
                 {
-                    Object.keys(topics).map((eachTopic, index)=>{
+                    topics && topics.length?
+                    topics.map((eachTopic, index)=>{
                         return(
                             <div className={`content__eachTopic content__eachTopic_${index%4}`}>
-                                <h3 className="content__eachTopic_title">{eachTopic}</h3>
+                                <h3 className="content__eachTopic_title">{eachTopic.name}</h3>
                                 {
-                                    topics[eachTopic].map((each)=>{
+                                    eachTopic.subTopics.map((each)=>{
                                         return(
                                             <div className="content_topic">
-                                                <ArrowRightIcon /> &nbsp;{each}
+                                                <ArrowRightIcon /> &nbsp;{each.name}
                                             </div>
                                         )
                                     })
                                 }
                             </div>
                         )
-                    })
+                    }):null
                 }
 
             </div>

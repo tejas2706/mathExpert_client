@@ -7,13 +7,10 @@ import HeaderPanel from '../../Components/HeaderPanel';
 import './styles.css';
 import SketchFieldComponent from '../../Components/SketchFieldComponent';
 import QuestionsBlock from '../../Components/QuestionsBlock';
-// import db from '../../firebase';
 
 function Questions() {
 
     const [question, setquestion] = useState({});
-
-
 
     const submitAns = (sol) => {
         console.log("Submitted solution", sol)
