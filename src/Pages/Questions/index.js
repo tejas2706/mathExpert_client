@@ -7,14 +7,21 @@ import HeaderPanel from '../../Components/HeaderPanel';
 import './styles.css';
 import SketchFieldComponent from '../../Components/SketchFieldComponent';
 import QuestionsBlock from '../../Components/QuestionsBlock';
+import service from '../../service/apiService';
 
-function Questions() {
+function Questions({match}) {
 
     const [question, setquestion] = useState({});
 
     const submitAns = (sol) => {
         console.log("Submitted solution", sol)
     }
+
+    useEffect(() => {
+        service.get(`http://localhost:8000/api/v1/mathexp/questions/${match.params.questionId}`).then(({data})=>{
+            setquestion(data)
+        })
+    }, [match.params.questionId])
 
     return (
         <div className="questions__container">

@@ -9,6 +9,7 @@ import './styles.css';
 import classesAndExams from'./classesAndExams';
 import ArrowRightIcon from '@material-ui/icons/ArrowRight';
 import service from '../../service/apiService';
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
   formControl: {
@@ -26,8 +27,8 @@ export default function Content() {
   const [topics, setTopics] = useState(null);
 
   useEffect(() => {
-    service.get(`http://localhost:8000/api/v1/mathexp/contents/?standard=${std}`).then((data)=>{
-        setTopics(data.data.topics)
+    service.get(`http://localhost:8000/api/v1/mathexp/contents/?standard=${std}`).then(({data})=>{
+        setTopics(data.topics)
     })
   }, [std])
 
@@ -64,7 +65,7 @@ export default function Content() {
                     classesAndExams.filter((each)=>each.class == std)[0]["examIds"].map((eachExam, index)=>{
                         return(
                             <div className={`content__eachExam content_examExam_${index}`}>
-                                <div class="flip-card">
+                                <div className="flip-card">
                                     {eachExam}
                                     {/* <div class="flip-card-inner">
                                         <div class="flip-card-front">
@@ -87,6 +88,9 @@ export default function Content() {
                     topics && topics.length?
                     topics.map((eachTopic, index)=>{
                         return(
+                            <Link to={{
+                                    pathname:`/topicDetails/${eachTopic._id}`
+                                }}>
                             <div className={`content__eachTopic content__eachTopic_${index%4}`}>
                                 <h3 className="content__eachTopic_title">{eachTopic.name}</h3>
                                 {
@@ -99,6 +103,7 @@ export default function Content() {
                                     })
                                 }
                             </div>
+                            </Link>
                         )
                     }):null
                 }

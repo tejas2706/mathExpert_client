@@ -20,16 +20,16 @@ function App() {
   return (
     <Router>
       <div className="app__root">
-      <Navbar />
+      {/* <Navbar /> */}
       <Switch>
         <Route path="/profile" component={Profile}/>
-        <Route path="/topicDetails" exact component={TopicDetails}/>
-        <Route path="/" exact component={Home}/>
-        <Route path="/questions" component={Questions}/>
+        <Route path="/topicDetails/:topicId" exact component={TopicDetails}/>
+        <Route path="/asd" exact component={Home}/>
+        <Route path="/questions/:questionId" component={Questions}/>
         <Route path="/quizResult" component={QuizResult}/>
         <Route path="/quiz" component={Quiz}/>
         <Route path="/aboutUs" component={AboutUs}/>
-        <Route path="/content" component={Content}/>
+        <Route path="/" component={Content}/>
         <Route path="/quizResult" component={QuizResult}/>
         <Route path="/faq" component={FAQ}/>
         <Route path="/login" exact component={Login}/>

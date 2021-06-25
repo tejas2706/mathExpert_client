@@ -21,7 +21,7 @@ async function handleDifficultyLevelClick(difficultyLevel, callbackFunctionToSet
     await callbackFunctionToSetQuestions(difficultyLevel,questions);
 }
 
-function Question({ selectedSubTopic, handleDifficultyLevelChange, setDifficultyLevel }) {
+function Question({ handleDifficultyLevelChange }) {
 
     const [difficultyLevel, setDifficulty] = useState("easy")
     handleDifficultyLevelClick(difficultyLevel,handleDifficultyLevelChange)

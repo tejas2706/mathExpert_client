@@ -10,39 +10,48 @@ import CreateIcon from '@material-ui/icons/Create';
 import HighlightOffIcon from '@material-ui/icons/HighlightOff';
 import { makeStyles } from '@material-ui/core/styles';
 import QuestionsCard from '../../Components/QuestionsCard';
+import service from '../../service/apiService';
+import _ from 'lodash';
 
+
+const onQuestionClick = () => {
+  
+}
 
 function renderHexagons(difficultyLevel, questionsArray) {
   let allQuestions = questionsArray.map((eachQues, i) => {
-    console.log("🚀 ~ file: index.js ~ line 10 ~ allQuestions ~ questionsArray", questionsArray)
     return (
-        <QuestionsCard classForColor={difficultyLevel} />
+      <QuestionsCard question={{i, eachQues}} classForColor={difficultyLevel} onQuestionClick={onQuestionClick}/>
     )
   })
-
-  console.log("🚀 ~ file: index.js ~ line 18 ~ renderHexagons ~ allQuestions", allQuestions)
   return allQuestions;
 }
 
 
-function TopicDetails() {
-
-  const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13,14,15,16,17,18]
-  const [subTopic, selectSubtopic] = useState(array[0])
-  const [questions, selectQuestions] = useState([])
-  const [difficultyLevel, setDifficultyLevel] = useState("easy")
+function TopicDetails({ match }) {
+  const [subTopics, setSubtopics] = useState({});
+  const [selectedSubTopic, setselectedSubTopic] = useState({});
+  const [questions, setQuestions] = useState([]);
+  const [difficultyLevel, setDifficultyLevel] = useState("easy");
+  const [topicName, settopicName] = useState(null)
   const [open, setOpen] = useState(false);
-  
+
 
   const onSubTopicClick = (subTopic) => {
-    selectSubtopic(subTopic);
+    setselectedSubTopic(subTopic);
     handleClose();
   }
 
+  useEffect(() => {
+    service.get(`http://localhost:8000/api/v1/mathexp/topicDetails/${match.params.topicId}`).then(({data}) => {
+      setSubtopics(data.subTopics);
+      settopicName(data.name);
+    })
+  }, [match.params.topicId])
 
   const handleDifficultyLevelChange = (difficultyLevel, questions) => {
     setDifficultyLevel(difficultyLevel);
-    return selectQuestions(questions)
+    return setQuestions(questions)
   }
 
   const useStyles = makeStyles((theme) => ({
@@ -91,7 +100,7 @@ function TopicDetails() {
                 <HighlightOffIcon onClick={() => handleClose()} />
               </div>
               <div className="subTopics__modal">
-                <SubTopics subTopics={array} onSubTopicClick={onSubTopicClick} />
+                <SubTopics subTopics={subTopics} onSubTopicClick={onSubTopicClick} />
               </div>
             </div>
           </Fade>
@@ -101,41 +110,44 @@ function TopicDetails() {
   }
 
   return (
-
-    <div className="topicDetails__container">
-      {/* <div className="topicDetails__subTopicContainer"> */}
-        <div className="topicDetails__subTopics">
-          <div className="topicDetails__topicName">
-            <h1>Topic Name</h1>
-          </div>
-          <div className="topicDetails__listSubTopics">
-            <SubTopics subTopics={array} onSubTopicClick={onSubTopicClick} />
-          </div>
-        </div>
-        <div className="topicDetails__questionContainer">
-          <DifficultyLevels selectedSubTopic={subTopic} handleDifficultyLevelChange={handleDifficultyLevelChange} />
-          <div className="topicDetails__subTopicTitle">
-            <h2>{"SubTopic " + subTopic}</h2>
-            <div className="topicDetails__subTopicTitle__dropdown" onClick={handleOpen}>
-              <i className="arrow down"></i>
+    <>
+      {
+        !_.isEmpty(subTopics) ?
+          <div className="topicDetails__container">
+            <div className="topicDetails__subTopics">
+              <div className="topicDetails__topicName">
+                <h1>{topicName}</h1>
+              </div>
+              <div className="topicDetails__listSubTopics">
+                <SubTopics subTopics={subTopics} onSubTopicClick={onSubTopicClick} />
+              </div>
+            </div>
+            <div className="topicDetails__questionContainer">
+              <DifficultyLevels handleDifficultyLevelChange={handleDifficultyLevelChange} />
+              <div className="topicDetails__subTopicTitle">
+                <h2>{selectedSubTopic.name || subTopics[0].name}</h2>
+                <div className="topicDetails__subTopicTitle__dropdown" onClick={handleOpen}>
+                  <i className="arrow down"></i>
+                </div>
+              </div>
+              <div className="topicDetails__questions">
+                {
+                  renderHexagons(difficultyLevel, selectedSubTopic.questions || subTopics[0].questions)
+                }
+              </div>
+              <br />
+              <div className="topicDetails__topicTest">
+                <button className="topicDetails__testBtn">Take Test</button>
+              </div>
+            </div>
+            <div >
+              {modal()}
             </div>
           </div>
-          <div className="topicDetails__questions">
-            {
-              renderHexagons(difficultyLevel, questions)
-            }
-          </div>
-          <br />
-          <div className="topicDetails__topicTest">
-            <button className="topicDetails__testBtn">Take Test</button>
-          </div>
-        </div>
-        <div >
-          {modal()}
-        </div>
-      {/* </div> */}
-      {/* </div> */}
-    </div>
+          :
+          <div>loading...</div>
+    }
+    </>
   );
 
 }
