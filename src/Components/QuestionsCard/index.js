@@ -8,7 +8,7 @@ import StarBorderIcon from '@material-ui/icons/StarBorder';
 import { Link } from 'react-router-dom';
 
 
-function QuestionsCard({ question, onQuestionClick, classForColor }) {
+function QuestionsCard({ question, onQuestionClick, classForColor, additionalDataForDisplay, questionsArray}) {
 
   const [isSolved, setisSolved] = useState(true);
   const [isBookmarked, setBookmark] = useState(false);
@@ -20,7 +20,8 @@ function QuestionsCard({ question, onQuestionClick, classForColor }) {
 
   return (
     <Link to={{
-      pathname: `/questions/${question.eachQues}`,
+      pathname: `/${additionalDataForDisplay.standard}/${additionalDataForDisplay.topicName}/${additionalDataForDisplay.subTopicName}/${question.eachQues}`,
+      questionsArray
     }} className="card" onClick={() => onQuestionClick(question.eachQues)}>
       <div className={`filledbar ${classForColor}`}></div>
       <div className="questionsCard__title">

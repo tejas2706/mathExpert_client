@@ -18,10 +18,16 @@ const onQuestionClick = () => {
   
 }
 
-function renderHexagons(difficultyLevel, questionsArray) {
+function renderHexagons(difficultyLevel, questionsArray, additionalDataForDisplay) {
   let allQuestions = questionsArray.map((eachQues, i) => {
     return (
-      <QuestionsCard question={{i, eachQues}} classForColor={difficultyLevel} onQuestionClick={onQuestionClick}/>
+      <QuestionsCard 
+        question={{i, eachQues}} 
+        classForColor={difficultyLevel} 
+        onQuestionClick={onQuestionClick} 
+        additionalDataForDisplay={additionalDataForDisplay} 
+        questionsArray={questionsArray} 
+      />
     )
   })
   return allQuestions;
@@ -35,6 +41,11 @@ function TopicDetails({ match }) {
   const [difficultyLevel, setDifficultyLevel] = useState("easy");
   const [topicName, settopicName] = useState(null)
   const [open, setOpen] = useState(false);
+
+  const additionDataForDisplay = {
+    topicName: match.params.topicName,
+    standard: match.params.standard
+  }
 
 
   const onSubTopicClick = (subTopic) => {
@@ -132,7 +143,7 @@ function TopicDetails({ match }) {
               </div>
               <div className="topicDetails__questions">
                 {
-                  renderHexagons(difficultyLevel, selectedSubTopic.questions || subTopics[0].questions)
+                  renderHexagons(difficultyLevel, selectedSubTopic.questions || subTopics[0].questions, { ...additionDataForDisplay, subTopicName:selectedSubTopic.name || subTopics[0].name  })
                 }
               </div>
               <br />

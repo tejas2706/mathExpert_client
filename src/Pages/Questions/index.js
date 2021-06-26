@@ -9,17 +9,21 @@ import SketchFieldComponent from '../../Components/SketchFieldComponent';
 import QuestionsBlock from '../../Components/QuestionsBlock';
 import service from '../../service/apiService';
 
-function Questions({match}) {
+function Questions({match, location }) {
 
     const [question, setquestion] = useState({});
 
+    const { topicName, subTopicName, standard, questionId } =  match.params
+    const { questionsArray } = location
     const submitAns = (sol) => {
         console.log("Submitted solution", sol)
     }
 
     useEffect(() => {
-        service.get(`http://localhost:8000/api/v1/mathexp/questions/${match.params.questionId}`).then(({data})=>{
-            setquestion(data)
+        service.get(`http://localhost:8000/api/v1/mathexp/question/${questionId}`).then(({data})=>{
+        console.log('/////////////////// ~ file: index.js ~ line 23 ~ service.get ~ data', data);
+
+            setquestion({...data, topicName, subTopicName, standard})
         })
     }, [match.params.questionId])
 
@@ -31,7 +35,7 @@ function Questions({match}) {
                     <Question data={question} options={question.options} submitAns={submitAns} />
                 </div>
                 <div className="questions__hintsAndSolutions">
-                    <QuestionsBlock />
+                    <QuestionsBlock questionsArray={questionsArray} />
                     <Hints />
                     <Solutions />
                 </div>

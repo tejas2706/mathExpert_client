@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './styles.css';
 
 function Question({ data, submitAns, options }) {
+    console.log('/////////////////// ~ file: index.js ~ line 5 ~ Question ~ data', data);
     const [selected, setselected] = useState(null);
     const [answer, setanswer] = useState("")
     const [submittedAnswer, setsubmittedAnswer] = useState(null)
@@ -22,22 +23,22 @@ function Question({ data, submitAns, options }) {
         <div>
             <div className="question__header">
                 <div className="question__header_inner">
-                    <h4>Topic : {data.topic}</h4>
-                    <h4>Sub Topic : {data.subTopic}</h4>
+                    <h4>Topic : {data.topicName}</h4>
+                    <h4>Sub Topic : {data.subTopicName}</h4>
                     <h4>Difficulty : {data.difficulty}</h4>
                 </div>
             </div>
             {/* /Question number and the question itself. */}
             <div className="question__container">
                 <div className="question__qNumAndQues">
-                    <h1 className="question__QNo">Q: {data.qNumber} &nbsp;</h1>
+                    <h1 className="question__QNo">Q: {1} &nbsp;</h1>
                     <div className="question__Q">
                         <h2>{data.question}</h2>
                     </div>
                 </div>
                 {
-                    data.imageUrl ?
-                        <img alt="asd" src={data.imageUrl}></img>
+                    data.questionImageUrl ?
+                        <img alt="asd" src={data.questionImageUrl}></img>
                         :
                         null
                 }
@@ -68,7 +69,7 @@ function Question({ data, submitAns, options }) {
                             <>
 
                                 {
-                                    options.map((each, index) => {
+                                    options && options.map((each, index) => {
                                         let classOfOption = index === selected ? "options__selectedOption" : "options__eachOption"
                                         return (
                                             <div className={classOfOption} onClick={() => setselected(index)}>

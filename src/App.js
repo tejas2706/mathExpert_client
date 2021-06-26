@@ -23,9 +23,9 @@ function App() {
       {/* <Navbar /> */}
       <Switch>
         <Route path="/profile" component={Profile}/>
-        <Route path="/topicDetails/:topicId" exact component={TopicDetails}/>
+        <Route path="/:standard/:topicName/:topicId" exact component={TopicDetails}/>
         <Route path="/asd" exact component={Home}/>
-        <Route path="/questions/:questionId" component={Questions}/>
+        <Route path="/:standard/:topicName/:subTopicName/:questionId" component={Questions}/>
         <Route path="/quizResult" component={QuizResult}/>
         <Route path="/quiz" component={Quiz}/>
         <Route path="/aboutUs" component={AboutUs}/>

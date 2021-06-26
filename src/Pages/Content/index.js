@@ -89,7 +89,7 @@ export default function Content() {
                     topics.map((eachTopic, index)=>{
                         return(
                             <Link to={{
-                                    pathname:`/topicDetails/${eachTopic._id}`
+                                    pathname:`/${std}/${eachTopic.name}/${eachTopic._id}`
                                 }}>
                             <div className={`content__eachTopic content__eachTopic_${index%4}`}>
                                 <h3 className="content__eachTopic_title">{eachTopic.name}</h3>
