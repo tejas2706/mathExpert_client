@@ -1,18 +1,25 @@
 import React from 'react';
 import './styles.css';
+import { Link } from 'react-router-dom';
 
-function QuestionsBlock({ questionsArr }) {
+
+function QuestionsBlock({ questionsArray, topicName, subTopicName, standard }) {
 
     return (
         <div className="questionsBlock__container">
             <h3>Questions . . . </h3>
             <div className="questionsBlock__questions">
                 {
-                    questionsArr.map((each)=>{
+                    questionsArray.map((each, i) => {
                         return (
-                            <div className="questionsBlock__eachQues">
-                                {each}
-                            </div>
+                            <Link to={{
+                                pathname: `/${standard}/${topicName}/${subTopicName}/${each + "murtuza"}`,
+                                questionsArray
+                            }}>
+                                <div className="questionsBlock__eachQues">
+                                    {i}
+                                </div>
+                            </Link>
                         )
                     })
                 }

@@ -6,6 +6,7 @@ import BookmarkIcon from '@material-ui/icons/Bookmark';
 import StarIcon from '@material-ui/icons/Star';
 import StarBorderIcon from '@material-ui/icons/StarBorder';
 import { Link } from 'react-router-dom';
+import { connect } from "react-redux";
 
 
 function QuestionsCard({ question, onQuestionClick, classForColor, additionalDataForDisplay, questionsArray}) {
@@ -35,4 +36,10 @@ function QuestionsCard({ question, onQuestionClick, classForColor, additionalDat
   )
 }
 
-export default QuestionsCard
+const mapDispatchToProps = (dispatch) => {
+  return {
+      addData: (data) => dispatch({ type: "" }),
+  }
+}
+// mapDispatchToProps
+export default connect(null, mapDispatchToProps)(QuestionsCard);

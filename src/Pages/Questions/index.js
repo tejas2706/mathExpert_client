@@ -21,8 +21,6 @@ function Questions({match, location }) {
 
     useEffect(() => {
         service.get(`http://localhost:8000/api/v1/mathexp/question/${questionId}`).then(({data})=>{
-        console.log('/////////////////// ~ file: index.js ~ line 23 ~ service.get ~ data', data);
-
             setquestion({...data, topicName, subTopicName, standard})
         })
     }, [match.params.questionId])
@@ -35,7 +33,7 @@ function Questions({match, location }) {
                     <Question data={question} options={question.options} submitAns={submitAns} />
                 </div>
                 <div className="questions__hintsAndSolutions">
-                    <QuestionsBlock questionsArray={questionsArray} />
+                    <QuestionsBlock questionsArray={questionsArray} topicName={topicName} subTopicName={subTopicName} standard={standard} />
                     <Hints />
                     <Solutions />
                 </div>
