@@ -10,6 +10,8 @@ import classesAndExams from'./classesAndExams';
 import ArrowRightIcon from '@material-ui/icons/ArrowRight';
 import service from '../../service/apiService';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+
 
 const useStyles = makeStyles((theme) => ({
   formControl: {
@@ -21,19 +23,21 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Content() {
+function Content({ setStandard, standard = null }) {
   const classes = useStyles();
-  const [std, setstd] = useState('6');
+  const [std, setstd] = useState(standard || '6');
   const [topics, setTopics] = useState(null);
 
   useEffect(() => {
+    setStandard(std);
     service.get(`http://localhost:8000/api/v1/mathexp/contents/?standard=${std}`).then(({data})=>{
         setTopics(data.topics)
     })
-  }, [std])
+  }, [std, setStandard])
 
   const handleChange = (event) => {
     setstd(event.target.value);
+    setStandard(std);
   };
   return (
     <div className="content__container">
@@ -113,3 +117,18 @@ export default function Content() {
     </div>
   );
 }
+
+const mapStateToProps = (state) => {
+    return {
+        standard: state.selectedFieldsReducer.standard
+    }
+}
+
+const mapDispatchToProps = (dispatch) => {
+    //TODO: MOVE actions into the separate file 
+    return {
+        setStandard: (std) => dispatch({ type: "SET_STD", payload: {standard: std }})
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Content)

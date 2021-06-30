@@ -12,7 +12,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import QuestionsCard from '../../Components/QuestionsCard';
 import service from '../../service/apiService';
 import _ from 'lodash';
-
+import { connect } from 'react-redux';
 
 const onQuestionClick = () => {
   
@@ -34,7 +34,7 @@ function renderHexagons(difficultyLevel, questionsArray, additionalDataForDispla
 }
 
 
-function TopicDetails({ match }) {
+function TopicDetails({match, standard}) {
   const [subTopics, setSubtopics] = useState({});
   const [selectedSubTopic, setselectedSubTopic] = useState({});
   const [questions, setQuestions] = useState([]);
@@ -127,7 +127,7 @@ function TopicDetails({ match }) {
           <div className="topicDetails__container">
             <div className="topicDetails__subTopics">
               <div className="topicDetails__topicName">
-                <h1>{topicName}</h1>
+                <h1>{topicName}{standard}</h1>
               </div>
               <div className="topicDetails__listSubTopics">
                 <SubTopics subTopics={subTopics} onSubTopicClick={onSubTopicClick} />
@@ -163,5 +163,14 @@ function TopicDetails({ match }) {
 
 }
 
+const mapStateToProps = (state) => {
+  return {
+    standard: state.selectedFieldsReducer.standard
+  }
+}
 
-export default TopicDetails
+const mapDispatchToProps = () => {
+
+} 
+
+export default connect(mapStateToProps, null)(TopicDetails);

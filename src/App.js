@@ -27,6 +27,7 @@ function App() {
         <Switch>
           <Route path="/profile" component={Profile}/>
           <Route path="/:standard/:topicName/:topicId" exact component={TopicDetails}/>
+          {/* <Route path="/topicDetails" exact component={TopicDetails}/> */}
           <Route path="/asd" exact component={Home}/>
           <Route path="/:standard/:topicName/:subTopicName/:questionId" component={Questions}/>
           <Route path="/quizResult" component={QuizResult}/>
