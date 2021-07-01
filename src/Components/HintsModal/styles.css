@@ -1,0 +1,43 @@
+.hintsModal__container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 7vh;
+    background-color: transparent;
+    width: 100%;
+    margin: 10px 0;
+}
+
+.hints__modal_title{
+    background-color: rgb(158, 158, 158);
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    align-self: flex-start;
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+
+}
+
+.hints__modal_title h4{
+    margin: 0;
+}
+
+.hintsModal__container{
+    width: 30vw;
+    height: 70vh;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
+    border-radius: 20px;
+    min-width: 300px;
+}
+
+.show__hints{
+    color: white;
+}

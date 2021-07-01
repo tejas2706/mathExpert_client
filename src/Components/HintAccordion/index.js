@@ -43,12 +43,12 @@ export default function HintAccordion({hints}) {
                     aria-controls="panel1bh-content"
                     id="panel1bh-header"
                     >
-                    <Typography className={classes.heading}>{index + each.title}</Typography>
+                    <Typography className={classes.heading}>{each.id}</Typography>
                     {/* <Typography className={classes.secondaryHeading}>I am an accordion</Typography> */}
                     </AccordionSummary>
                     <AccordionDetails>
                     <Typography>
-                      <b>{each.expandedText}</b>
+                      <b>{each.hint}</b>
                     </Typography>
                     </AccordionDetails>
                 </Accordion>
