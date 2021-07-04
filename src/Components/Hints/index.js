@@ -17,7 +17,7 @@ function Hints() {
     const allHints = [
         {
             "id": "hint1",
-            "hint": "Try to multiple 25 by 25."
+            "hint": "Try to multiple 25 by 25.  "
         },
         {
             "id": "hint2",
