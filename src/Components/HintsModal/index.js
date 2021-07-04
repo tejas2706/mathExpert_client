@@ -19,6 +19,9 @@ const useStyles = makeStyles((theme) => ({
         boxShadow: theme.shadows[5],
         padding: theme.spacing(2, 4, 3),
     },
+    crossBtn: {
+        cursor: 'pointer'
+    }
 }));
 
 
@@ -50,7 +53,7 @@ function HintsModal({hints, handleCloseHintsModal}) {
                             <div className={classes.paper1} className="hintsModal__container">
                                 <div className="hints__modal_title">
                                     <h3>Hints</h3>
-                                    <HighlightOffIcon onClick={handleCloseHintsModal} />
+                                    <HighlightOffIcon className={classes.crossBtn} onClick={handleCloseHintsModal} />
                                 </div>
                                 <div className="show__hints">
                                     <HintAccordion hints={hints}></HintAccordion>

@@ -1,0 +1,71 @@
+.LearningTrack__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 150px;
+    padding: 20px;
+}
+
+.LearningTrack__title{
+    font-size: xx-large;
+    font-weight: bold;
+    margin: 0 0 80px 0;
+    text-align: center;
+}
+
+.LearningTrack__tracks{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 90%;
+    padding: 15px;
+    font-size: large;
+    margin-top: 20px;
+    border: 1px solid gray;
+    border-radius: 20px;
+    background-color: white;
+}
+
+.LearningTrack__subtitle{
+    align-self: flex-start;
+    margin-left: 30px;
+}
+
+.LearningTrack__eachItem{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    min-width: 240px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid green;
+    border-radius: 20px;
+}
+
+.LearningTrack__eachItem:hover{
+
+}
+
+.LearningTrack__eachItem_details{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+.LearningTrack__eachItem_duration{
+    justify-self: flex-end;
+    margin-right: 20px;
+}
+
+.LearningTrack__eachItem_tutorImg{
+    width: 32px;
+    height: 32px;
+    border: 1px solid black;
+    border-radius: 50%;
+}

@@ -22,6 +22,10 @@ function Hints() {
         {
             "id": "hint2",
             "hint": "Try to multiple 5 by itself 4 times."
+        },
+        {
+            "id": "hint3",
+            "hint": "Try to multiple 5 by itself 4 times."
         }
     ];
 

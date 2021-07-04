@@ -29,7 +29,7 @@
 
 .hintsModal__container{
     width: 30vw;
-    height: 70vh;
+    height: fit-content;
     background-color: white;
     align-items: center;
     justify-content: center;

@@ -9,20 +9,20 @@ import SketchFieldComponent from '../../Components/SketchFieldComponent';
 import QuestionsBlock from '../../Components/QuestionsBlock';
 import service from '../../service/apiService';
 
-function Questions({match, location }) {
+function Questions({ match, location }) {
 
     const [question, setquestion] = useState({});
 
-    const { topicName, subTopicName, standard, questionId } =  match.params
+    const { topicName, subTopicName, standard, questionId } = match.params
     const { questionsArray } = location
     const submitAns = (sol) => {
         console.log("Submitted solution", sol)
     }
 
     useEffect(() => {
-        service.get(`http://localhost:8000/api/v1/mathexp/question/${questionId}`).then(({data})=>{
-            setquestion({...data, topicName, subTopicName, standard})
-        })
+        service.get(`http://localhost:8000/api/v1/mathexp/question/${questionId}`).then(({ data }) => {
+            setquestion({ ...data, topicName, subTopicName, standard })
+        });
     }, [match.params.questionId])
 
     return (
