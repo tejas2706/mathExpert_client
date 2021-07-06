@@ -7,26 +7,26 @@ import DescriptionRight from '../DescriptionRight';
 import IntroContent from './IntroContent';
 
 function Intro() {
-    const goToDescription = () => {};
+  const goToDescription = () => {};
 
-    return (
-        <div className="intro__container">
-            <div className="intro__title">
-                <h1>What is OlympExpert ?</h1>
-            </div>
-            <div className="intro__cardsContainer">
-                {cardsContent.map((each) => {
-                    return (
-                        <IntroCard
-                            key={each.id}
-                            cardData={each}
-                            onClick={() => goToDescription()}
-                        />
-                    );
-                })}
-            </div>
-        </div>
-    );
+  return (
+    <div className="intro__container">
+      <div className="intro__title">
+        <h1>What is OlympExpert ?</h1>
+      </div>
+      <div className="intro__cardsContainer">
+        {cardsContent.map((each) => {
+          return (
+            <IntroCard
+              key={each.id}
+              cardData={each}
+              onClick={() => goToDescription()}
+            />
+          );
+        })}
+      </div>
+    </div>
+  );
 }
 
 export default Intro;

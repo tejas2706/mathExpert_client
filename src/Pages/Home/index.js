@@ -6,14 +6,14 @@ import PageBreak from '../../Components/PageBreak';
 import './styles.css';
 
 function Home() {
-    return (
-        <div className="Home">
-            <Banner />
-            <PageBreak />
-            <Intro />
-            <ExamsList />
-        </div>
-    );
+  return (
+    <div className="Home">
+      <Banner />
+      <PageBreak />
+      <Intro />
+      <ExamsList />
+    </div>
+  );
 }
 
 export default Home;

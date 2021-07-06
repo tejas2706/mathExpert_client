@@ -21,52 +21,46 @@ import ChooseContent from './Pages/ChooseContent';
 import LearningTrack from './Pages/LearningTrack';
 
 function App() {
-    return (
-        <Provider store={store}>
-            <Router>
-                <div className="app__root">
-                    {/* <Navbar /> */}
-                    <Switch>
-                        <Route path="/profile" component={Profile} />
-                        <Route
-                            path="/:standard/:topicName/:topicId"
-                            exact
-                            component={TopicDetails}
-                        />
-                        {/* <Route path="/topicDetails" exact component={TopicDetails}/> */}
-                        <Route path="/asd" exact component={Home} />
-                        <Route
-                            path="/:standard/:topicName/:subTopicName/:questionId"
-                            component={Questions}
-                        />
-                        <Route path="/quizResult" component={QuizResult} />
-                        <Route path="/quiz" component={Quiz} />
-                        <Route
-                            path="/chooseContent"
-                            component={ChooseContent}
-                        />
-                        <Route
-                            path="/LearningTrack"
-                            component={LearningTrack}
-                        />
-                        <Route path="/aboutUs" component={AboutUs} />
-                        <Route path="/" component={Content} />
-                        <Route path="/quizResult" component={QuizResult} />
-                        <Route path="/faq" component={FAQ} />
-                        <Route path="/login" exact component={Login} />
-                    </Switch>
-                    {/* <Footer /> */}
-                    {/* <QuizResult /> */}
-                    {/* <Home/> */}
-                    {/* <Questions /> */}
-                    {/* <Quiz /> */}
-                    {/* <QuizQuestion /> */}
-                    {/* <Quiz /> */}
-                    {/* <AboutUs /> */}
-                </div>
-            </Router>
-        </Provider>
-    );
+  return (
+    <Provider store={store}>
+      <Router>
+        <div className="app__root">
+          {/* <Navbar /> */}
+          <Switch>
+            <Route path="/profile" component={Profile} />
+            <Route
+              path="/:standard/:topicName/:topicId"
+              exact
+              component={TopicDetails}
+            />
+            {/* <Route path="/topicDetails" exact component={TopicDetails}/> */}
+            <Route path="/asd" exact component={Home} />
+            <Route
+              path="/:standard/:topicName/:subTopicName/:questionId"
+              component={Questions}
+            />
+            <Route path="/quizResult" component={QuizResult} />
+            <Route path="/quiz" component={Quiz} />
+            <Route path="/chooseContent" component={ChooseContent} />
+            <Route path="/LearningTrack" component={LearningTrack} />
+            <Route path="/aboutUs" component={AboutUs} />
+            <Route path="/" component={Content} />
+            <Route path="/quizResult" component={QuizResult} />
+            <Route path="/faq" component={FAQ} />
+            <Route path="/login" exact component={Login} />
+          </Switch>
+          {/* <Footer /> */}
+          {/* <QuizResult /> */}
+          {/* <Home/> */}
+          {/* <Questions /> */}
+          {/* <Quiz /> */}
+          {/* <QuizQuestion /> */}
+          {/* <Quiz /> */}
+          {/* <AboutUs /> */}
+        </div>
+      </Router>
+    </Provider>
+  );
 }
 
 export default App;
