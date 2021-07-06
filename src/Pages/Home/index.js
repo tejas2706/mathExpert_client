@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import Banner from '../../Components/Banner';
 import ExamsList from '../../Components/ExamsList';
 import Intro from '../../Components/Intro';
@@ -13,7 +13,7 @@ function Home() {
             <Intro />
             <ExamsList />
         </div>
-    )
+    );
 }
 
-export default Home
+export default Home;

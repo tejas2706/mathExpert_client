@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import './styles.css';
 
 function HeaderPanel() {
@@ -11,7 +11,7 @@ function HeaderPanel() {
                 <button className="headerPanel__quesBtn">Next</button>
             </div> */}
         </div>
-    )
+    );
 }
 
-export default HeaderPanel
+export default HeaderPanel;

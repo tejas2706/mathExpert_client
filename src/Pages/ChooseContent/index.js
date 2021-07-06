@@ -10,25 +10,32 @@ function ChooseContent() {
             <div className="ChooseContent__backbtn">
                 <h3>⤾Choose other topic</h3>
             </div>
-            <div className="ChooseContent__title">
-                What you wish to do?
-            </div>
+            <div className="ChooseContent__title">What you wish to do?</div>
             <div className="ChooseContent__types">
                 <div className="ChooseContent__type">
                     <h2>Learn</h2>
-                    <img src={learn} className="ChooseContent__type_image" alt="learn"></img>
+                    <img
+                        src={learn}
+                        className="ChooseContent__type_image"
+                        alt="learn"></img>
                 </div>
                 <div className="ChooseContent__type">
                     <h2>Practice</h2>
-                    <img src={practice} className="ChooseContent__type_image" alt="learn"></img>
+                    <img
+                        src={practice}
+                        className="ChooseContent__type_image"
+                        alt="learn"></img>
                 </div>
                 <div className="ChooseContent__type">
                     <h2>Test</h2>
-                    <img src={test} className="ChooseContent__type_image" alt="learn"></img>                
+                    <img
+                        src={test}
+                        className="ChooseContent__type_image"
+                        alt="learn"></img>
                 </div>
             </div>
         </div>
-    )
+    );
 }
 
-export default ChooseContent
+export default ChooseContent;

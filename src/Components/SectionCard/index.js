@@ -2,21 +2,20 @@ import React, { useState, useEffect } from 'react';
 import './styles.css';
 
 function SectionCard() {
-
-    let arr = ["Decimal place value",
-        "Add decimals",
-        "Subtract decimals",
-        "Add and subtract fractions",
-        "Multi-digit multiplication and division",
-        "Multiply fractions",
-        "Divide fractions",
-        "Multiply decimals",
-        "Divide decimals",
-        "Powers of ten",
-        "Volume",
-        "Coordinate"]
-
-
+    let arr = [
+        'Decimal place value',
+        'Add decimals',
+        'Subtract decimals',
+        'Add and subtract fractions',
+        'Multi-digit multiplication and division',
+        'Multiply fractions',
+        'Divide fractions',
+        'Multiply decimals',
+        'Divide decimals',
+        'Powers of ten',
+        'Volume',
+        'Coordinate',
+    ];
 
     return (
         <div className="sectionCard__container">
@@ -32,20 +31,19 @@ function SectionCard() {
                 </div>
             </div>
             <div className="sectionCard__topics">
-                {
-                    arr.map(eachTopic => {
-                        return (
-                            <div className="sectionCard__topic">
-                                <a href="#" className="sectionCard__topicLink"> <h4 >
-                                    {eachTopic}
-                                </h4></a>
-                            </div>
-                        );
-                    })
-                }
+                {arr.map((eachTopic) => {
+                    return (
+                        <div className="sectionCard__topic">
+                            <a href="#" className="sectionCard__topicLink">
+                                {' '}
+                                <h4>{eachTopic}</h4>
+                            </a>
+                        </div>
+                    );
+                })}
             </div>
         </div>
-    )
+    );
 }
 
-export default SectionCard
+export default SectionCard;

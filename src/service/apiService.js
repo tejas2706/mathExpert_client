@@ -1,10 +1,10 @@
 const axios = require('axios');
 
 exports.get = async (path) => {
-    try{
+    try {
         return await axios.get(path);
-    }catch(err){
-        console.log("Error while fetching data: ",err)
+    } catch (err) {
+        console.log('Error while fetching data: ', err);
     }
 };
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import './styles.css';
-import LoginImg from '../../assets/loginLogo.png'
+import LoginImg from '../../assets/loginLogo.png';
 
 export default function Login() {
     return (
@@ -15,14 +15,20 @@ export default function Login() {
                         <h1>Login</h1>
                     </div>
                     <div className="login__action__emailInput">
-                        <input type="text" placeholder="Email Address" className="login__action__emailInput" />
+                        <input
+                            type="text"
+                            placeholder="Email Address"
+                            className="login__action__emailInput"
+                        />
                     </div>
                     <div className="login__action__passwordInput">
-                        <input type="password" placeholder="Password" className="login__action__passwordInput" />
+                        <input
+                            type="password"
+                            placeholder="Password"
+                            className="login__action__passwordInput"
+                        />
                     </div>
-                    <div className="login__btn">
-                        Login
-                    </div>
+                    <div className="login__btn">Login</div>
                     <h3> OR </h3>
                     <div className="login__third__party">
                         <div className=" login__btn login__via__google">
@@ -31,7 +37,6 @@ export default function Login() {
                     </div>
                 </div>
             </div>
-
         </div>
-    )
+    );
 }

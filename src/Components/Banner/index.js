@@ -1,19 +1,21 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import './styles.css';
-import  mathQuotes from "../../mathQuotes.js";
+import mathQuotes from '../../mathQuotes.js';
 import RotatingCube from '../RotatingCube';
 import DoubleArrowIcon from '@material-ui/icons/DoubleArrow';
 import PlayForWorkIcon from '@material-ui/icons/PlayForWork';
 
 function Banner() {
-    const [quoteDetails, setquoteDetails] = useState(mathQuotes[Math.ceil(Math.random()*5)])
-    
+    const [quoteDetails, setquoteDetails] = useState(
+        mathQuotes[Math.ceil(Math.random() * 5)],
+    );
+
     // useEffect(() => {
     //     function changeQuote(){
     //         setTimeout(() => {
     //             let randomQuoteNumber = Math.ceil(Math.random()*5);
-    //             setquoteDetails(mathQuotes[randomQuoteNumber === quoteDetails.quoteId ? 
-    //                 quoteDetails.quoteId - 1 ? quoteDetails.quoteId - 1 : quoteDetails.quoteId + 1 : 
+    //             setquoteDetails(mathQuotes[randomQuoteNumber === quoteDetails.quoteId ?
+    //                 quoteDetails.quoteId - 1 ? quoteDetails.quoteId - 1 : quoteDetails.quoteId + 1 :
     //                 randomQuoteNumber])
     //         }, 10000);
     //         return;
@@ -33,9 +35,9 @@ function Banner() {
                 <h1>Prepare for the olympiads with Competitive Prep.</h1>
                 <div className="banner_contentBoxes_vertical">
                     <div className="banner_eachBox red_box">Learn</div>
-                    <DoubleArrowIcon style={{transform:"rotate(90deg)"}}/>
+                    <DoubleArrowIcon style={{ transform: 'rotate(90deg)' }} />
                     <div className="banner_eachBox yellow_box">Practice</div>
-                    <DoubleArrowIcon style={{transform:"rotate(90deg)"}}/>
+                    <DoubleArrowIcon style={{ transform: 'rotate(90deg)' }} />
                     <div className="banner_eachBox green_box">Assess</div>
                 </div>
                 <div className="banner_contentBoxes_horizontal">
@@ -55,7 +57,7 @@ function Banner() {
                 <h4 className="banner__author">-- {quoteDetails.author}</h4>
             </div> */}
         </div>
-    )
+    );
 }
 
-export default Banner
+export default Banner;

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Modal from '@material-ui/core/Modal';
 import Backdrop from '@material-ui/core/Backdrop';
@@ -20,13 +20,11 @@ const useStyles = makeStyles((theme) => ({
         padding: theme.spacing(2, 4, 3),
     },
     crossBtn: {
-        cursor: 'pointer'
-    }
+        cursor: 'pointer',
+    },
 }));
 
-
-function HintsModal({hints, handleCloseHintsModal}) {
-
+function HintsModal({ hints, handleCloseHintsModal }) {
     const classes = useStyles();
     const [open, setOpen] = useState(true);
 
@@ -46,37 +44,36 @@ function HintsModal({hints, handleCloseHintsModal}) {
                     BackdropComponent={Backdrop}
                     BackdropProps={{
                         timeout: 500,
-                    }}
-                >
+                    }}>
                     <Fade in={open}>
                         {
-                            <div className={classes.paper1} className="hintsModal__container">
+                            <div
+                                className={classes.paper1}
+                                className="hintsModal__container">
                                 <div className="hints__modal_title">
                                     <h3>Hints</h3>
-                                    <HighlightOffIcon className={classes.crossBtn} onClick={handleCloseHintsModal} />
+                                    <HighlightOffIcon
+                                        className={classes.crossBtn}
+                                        onClick={handleCloseHintsModal}
+                                    />
                                 </div>
                                 <div className="show__hints">
-                                    <HintAccordion hints={hints}></HintAccordion>
+                                    <HintAccordion
+                                        hints={hints}></HintAccordion>
                                 </div>
                             </div>
                         }
                     </Fade>
                 </Modal>
             </div>
-        )
-    }
-
-
+        );
+    };
 
     return (
         <div>
-            <div className="hintsModal__container">
-                {
-                    modal()
-                }
-            </div>
+            <div className="hintsModal__container">{modal()}</div>
         </div>
-    )
+    );
 }
 
-export default HintsModal
+export default HintsModal;
