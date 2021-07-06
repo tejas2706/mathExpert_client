@@ -35,39 +35,33 @@ function renderHexagons(
   return allQuestions;
 }
 
-function TopicDetails({ match, standard }) {
+
+function TopicDetails({match, standard, topicId, topicName, subTopicName, questionsArr, setSubTopicName, setQuestionsArr}) {
   const [subTopics, setSubtopics] = useState({});
-  const [selectedSubTopic, setselectedSubTopic] = useState({});
-  const [questions, setQuestions] = useState([]);
-  const [difficultyLevel, setDifficultyLevel] = useState('easy');
-  const [topicName, settopicName] = useState(null);
+  // const [selectedSubTopic, setselectedSubTopic] = useState({});
+  // const [questions, setQuestions] = useState([]);
+  const [difficultyLevel, setDifficultyLevel] = useState("easy");
+  // const [topicName, settopicName] = useState(null)
   const [open, setOpen] = useState(false);
 
-  const additionDataForDisplay = {
-    topicName: match.params.topicName,
-    standard: match.params.standard,
-  };
-
   const onSubTopicClick = (subTopic) => {
-    setselectedSubTopic(subTopic);
+    setSubTopicName(subTopic.name)
+    setQuestionsArr(subTopic.questions)
     handleClose();
   };
 
   useEffect(() => {
-    service
-      .get(
-        `http://localhost:8000/api/v1/mathexp/topicDetails/${match.params.topicId}`,
-      )
-      .then(({ data }) => {
-        setSubtopics(data.subTopics);
-        settopicName(data.name);
-      });
-  }, [match.params.topicId]);
+    service.get(`http://localhost:8000/api/v1/mathexp/topicDetails/${topicId}`).then(({data}) => {
+      setSubtopics(data.subTopics)
+      setSubTopicName(data.subTopics[0].name)
+      setQuestionsArr(data.subTopics[0].questions)
+    })
+  }, [topicId])
 
   const handleDifficultyLevelChange = (difficultyLevel, questions) => {
     setDifficultyLevel(difficultyLevel);
-    return setQuestions(questions);
-  };
+    return setQuestionsArr(questions);
+  }
 
   const useStyles = makeStyles((theme) => ({
     modal: {
@@ -157,14 +151,7 @@ function TopicDetails({ match, standard }) {
               </div>
             </div>
             <div className="topicDetails__questions">
-              {renderHexagons(
-                difficultyLevel,
-                selectedSubTopic.questions || subTopics[0].questions,
-                {
-                  ...additionDataForDisplay,
-                  subTopicName: selectedSubTopic.name || subTopics[0].name,
-                },
-              )}
+              {  renderHexagons(difficultyLevel, questionsArr, { subTopicName }) }
             </div>
             <br />
             <div className="topicDetails__topicTest">
@@ -173,7 +160,7 @@ function TopicDetails({ match, standard }) {
           </div>
           <div>{modal()}</div>
         </div>
-      ) : (
+       ) : (
         <div>loading...</div>
       )}
     </>
@@ -183,9 +170,18 @@ function TopicDetails({ match, standard }) {
 const mapStateToProps = (state) => {
   return {
     standard: state.selectedFieldsReducer.standard,
-  };
-};
+    topicName: state.selectedFieldsReducer.topicDetails.topicName,
+    topicId: state.selectedFieldsReducer.topicDetails.topicId,
+    subTopicName: state.selectedFieldsReducer.subTopicName,
+    questionsArr: state.selectedFieldsReducer.questionsArr,
+  }
+}
 
-const mapDispatchToProps = () => {};
+const mapDispatchToProps = (dispatch) => {
+  return {
+    setSubTopicName: (subTopicName) => dispatch({ type: "SET_SUBTOPIC", payload: {subTopicName: subTopicName }}),
+    setQuestionsArr: (questionsArr) => dispatch({ type: "SET_QUESTIONS", payload: {questions: questionsArr }})
+  }
+}
 
-export default connect(mapStateToProps, null)(TopicDetails);
+export default connect(mapStateToProps, mapDispatchToProps)(TopicDetails);

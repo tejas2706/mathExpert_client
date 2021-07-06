@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function Content({ setStandard, standard = null }) {
+function Content({ setStandard, setTopicDetails, standard = null }) {
   const classes = useStyles();
   const [std, setstd] = useState(standard || '6');
   const [topics, setTopics] = useState(null);
@@ -76,46 +76,45 @@ function Content({ setStandard, standard = null }) {
                                             Show exam details here..
                                         </div>
                                     </div> */}
-                  </div>
-                </div>
-              );
-            })}
-        </div>
-        <div className="content__topicTitle">
-          Maths preparation for the above exams for class {std}
-        </div>
-        {/* <div className="content__line"></div> */}
-        <div className="content__topics">
-          {topics && topics.length
-            ? topics.map((eachTopic, index) => {
-                return (
-                  <Link
-                    to={{
-                      pathname: `/${std}/${eachTopic.name}/${eachTopic._id}`,
-                    }}>
-                    <div
-                      className={`content__eachTopic content__eachTopic_${
-                        index % 4
-                      }`}>
-                      <h3 className="content__eachTopic_title">
-                        {eachTopic.name}
-                      </h3>
-                      {eachTopic.subTopics.map((each) => {
-                        return (
-                          <div className="content_topic">
-                            <ArrowRightIcon /> &nbsp;
-                            {each.name}
-                          </div>
-                        );
-                      })}
-                    </div>
-                  </Link>
-                );
-              })
-            : null}
+                                </div>
+                            </div>
+                        )
+                    })
+                }
+            </div>
+            <div className="content__topicTitle">Maths preparation for the above exams for class {std}</div>
+            {/* <div className="content__line"></div> */}
+            <div className="content__topics">
+                {
+                    topics && topics.length?
+                    topics.map((eachTopic, index)=>{
+                        return(
+                            <Link to={{
+                                    pathname:`/topicDetails`
+                                }}>
+                            <div className={`content__eachTopic content__eachTopic_${index%4}`} onClick={() => setTopicDetails({
+                                topicId: eachTopic._id,
+                                topicName: eachTopic.name
+                            })}>
+                                <h3 className="content__eachTopic_title">{eachTopic.name}</h3>
+                                {
+                                    eachTopic.subTopics.map((each)=>{
+                                        return(
+                                            <div className="content_topic">
+                                                <ArrowRightIcon /> &nbsp;{each.name}
+                                            </div>
+                                        )
+                                    })
+                                }
+                            </div>
+                            </Link>
+                        )
+                    }):null
+                }
+
+            </div>
         </div>
       </div>
-    </div>
   );
 }
 
@@ -126,11 +125,11 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = (dispatch) => {
-  //TODO: MOVE actions into the separate file
-  return {
-    setStandard: (std) =>
-      dispatch({ type: 'SET_STD', payload: { standard: std } }),
-  };
-};
+    //TODO: MOVE actions into the separate file 
+    return {
+        setStandard: (std) => dispatch({ type: "SET_STD", payload: {standard: std }}),
+        setTopicDetails: (topicDetails) => dispatch({ type: "SET_TOPIC_DETAILS", payload: {details: topicDetails }})
+    }
+}
 
 export default connect(mapStateToProps, mapDispatchToProps)(Content);
