@@ -1,27 +1,23 @@
+import React from 'react';
+import { Provider } from 'react-redux';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { PersistGate } from 'redux-persist/integration/react';
+import { store, persistor } from './redux/store';
+
 import './App.css';
-import Navbar from './Components/Navbar';
 import Home from './Pages/Home';
 import Questions from './Pages/Questions';
-import Footer from './Components/Footer';
-import Hexagon from './Components/Hexagon';
 import TopicDetails from './Pages/TopicDetails';
 import Content from './Pages/Content';
-import QuestionsCard from './Components/QuestionsCard';
-import QuizQuestion from './Components/QuizQuestion';
 import Quiz from './Pages/Quiz';
 import QuizResult from './Pages/QuizResult';
 import AboutUs from './Pages/AboutUs';
 import Profile from './Pages/Profile';
 import FAQ from './Pages/FAQ';
 import Login from './Pages/Login';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { Provider } from 'react-redux';
-import { store, persistor } from './redux/store'
-import { PersistGate } from 'redux-persist/integration/react'
 
 import ChooseContent from './Pages/ChooseContent';
 import LearningTrack from './Pages/LearningTrack';
-
 
 function App() {
   return (

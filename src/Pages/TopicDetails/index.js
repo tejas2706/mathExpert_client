@@ -14,14 +14,12 @@ import service from '../../service/apiService';
 import _ from 'lodash';
 import { connect } from 'react-redux';
 
-const onQuestionClick = () => {};
+const onQuestionClick = () => {
 
-function renderHexagons(
-  difficultyLevel,
-  questionsArray,
-  additionalDataForDisplay,
-) {
-  let allQuestions = questionsArray.map((eachQues, i) => {
+};
+
+function renderHexagons(difficultyLevel,questionsArray,additionalDataForDisplay) {
+  let allQuestions = questionsArray && questionsArray.map((eachQues, i) => {
     return (
       <QuestionsCard
         question={{ i, eachQues }}
@@ -37,11 +35,8 @@ function renderHexagons(
 
 
 function TopicDetails({match, standard, topicId, topicName, subTopicName, questionsArr, setSubTopicName, setQuestionsArr}) {
-  const [subTopics, setSubtopics] = useState({});
-  // const [selectedSubTopic, setselectedSubTopic] = useState({});
-  // const [questions, setQuestions] = useState([]);
+  const [subTopics, setSubtopics] = useState([]);
   const [difficultyLevel, setDifficultyLevel] = useState("easy");
-  // const [topicName, settopicName] = useState(null)
   const [open, setOpen] = useState(false);
 
   const onSubTopicClick = (subTopic) => {
@@ -60,7 +55,7 @@ function TopicDetails({match, standard, topicId, topicName, subTopicName, questi
 
   const handleDifficultyLevelChange = (difficultyLevel, questions) => {
     setDifficultyLevel(difficultyLevel);
-    return setQuestionsArr(questions);
+    // return setQuestionsArr(questions);
   }
 
   const useStyles = makeStyles((theme) => ({
@@ -135,6 +130,7 @@ function TopicDetails({match, standard, topicId, topicName, subTopicName, questi
               <SubTopics
                 subTopics={subTopics}
                 onSubTopicClick={onSubTopicClick}
+                subTopicName={subTopicName}
               />
             </div>
           </div>
@@ -143,7 +139,7 @@ function TopicDetails({match, standard, topicId, topicName, subTopicName, questi
               handleDifficultyLevelChange={handleDifficultyLevelChange}
             />
             <div className="topicDetails__subTopicTitle">
-              <h2>{selectedSubTopic.name || subTopics[0].name}</h2>
+              <h2>{subTopicName}</h2>
               <div
                 className="topicDetails__subTopicTitle__dropdown"
                 onClick={handleOpen}>
@@ -151,7 +147,7 @@ function TopicDetails({match, standard, topicId, topicName, subTopicName, questi
               </div>
             </div>
             <div className="topicDetails__questions">
-              {  renderHexagons(difficultyLevel, questionsArr, { subTopicName }) }
+              {  renderHexagons(difficultyLevel, questionsArr, { subTopicName: subTopicName }) }
             </div>
             <br />
             <div className="topicDetails__topicTest">
@@ -168,6 +164,7 @@ function TopicDetails({match, standard, topicId, topicName, subTopicName, questi
 }
 
 const mapStateToProps = (state) => {
+  console.log('%%%%%%%%%%%%%%%%%%%%%%%%%%%%', state)
   return {
     standard: state.selectedFieldsReducer.standard,
     topicName: state.selectedFieldsReducer.topicDetails.topicName,
@@ -180,7 +177,10 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     setSubTopicName: (subTopicName) => dispatch({ type: "SET_SUBTOPIC", payload: {subTopicName: subTopicName }}),
-    setQuestionsArr: (questionsArr) => dispatch({ type: "SET_QUESTIONS", payload: {questions: questionsArr }})
+    setQuestionsArr: (questionsArr) => {
+      console.log('///////////////////', questionsArr)
+      dispatch({ type: "SET_QUESTIONS", payload: {questions: questionsArr }})
+    }
   }
 }
 

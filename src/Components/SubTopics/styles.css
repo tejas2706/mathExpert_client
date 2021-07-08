@@ -18,11 +18,16 @@
 }
 
 .subTopics__subTopic:hover{
-    color: #785633;
+    color: gray;
 }
 
 .subTopics__subTopicTitle {
     font-size: larger;
+}
+
+.subTopics__subTopicHighlighted {
+    border-bottom: solid black 3px;
+    color:blue;
 }
 
 

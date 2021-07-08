@@ -12,7 +12,8 @@ const selectedFields = (state = {}, action) => {
       state = { ...state, subTopicName: action.payload.subTopicName };
       break;
     case "SET_QUESTIONS":
-      state = { ...state, questions: action.payload.questions };
+      console.log('/////////////////// ~ file: userSelected.js ~ line 16 ~ selectedFields ~ action.payload', action.payload);
+      state = { ...state, questionsArr: action.payload.questions };
       break;
     default:
       break;
