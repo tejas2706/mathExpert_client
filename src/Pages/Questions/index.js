@@ -8,23 +8,28 @@ import './styles.css';
 import SketchFieldComponent from '../../Components/SketchFieldComponent';
 import QuestionsBlock from '../../Components/QuestionsBlock';
 import service from '../../service/apiService';
+import { connect } from 'react-redux';
 
-function Questions({ match, location }) {
-  const [question, setquestion] = useState({});
+function Questions({ questionsArr, topicName, subTopicName, selectedQuestion, setSelectedQuestion }) {
+  const [questionDetails, setquestionDetails] = useState({});
 
-  const { topicName, subTopicName, standard, questionId } = match.params;
-  const { questionsArray } = location;
   const submitAns = (sol) => {
     console.log('Submitted solution', sol);
   };
 
+  const selectNewQuestion = (questionId) => {
+    setSelectedQuestion(questionId);
+  };
+
   useEffect(() => {
+    console.log("🚀 ~============================================ selectedQuestion", selectedQuestion)
     service
-      .get(`http://localhost:8000/api/v1/mathexp/question/${questionId}`)
-      .then(({ data }) => {
-        setquestion({ ...data, topicName, subTopicName, standard });
+    .get(`http://localhost:8000/api/v1/mathexp/question/${selectedQuestion}`)
+    .then(({ data }) => {
+        setquestionDetails({ ...data });
+        setSelectedQuestion(data._id);
       });
-  }, [match.params.questionId]);
+  }, [selectedQuestion]);
 
   return (
     <div className="questions__container">
@@ -32,19 +37,17 @@ function Questions({ match, location }) {
       <div className="questions__innerContainer">
         <div className="questions__quesAndOptions">
           <Question
-            data={question}
-            options={question.options}
+            questionData={{questionDetails, topicName, subTopicName }}
+            options={questionDetails.options}
             submitAns={submitAns}
           />
         </div>
         <div className="questions__hintsAndSolutions">
           <QuestionsBlock
-            questionsArray={questionsArray}
-            topicName={topicName}
-            subTopicName={subTopicName}
-            standard={standard}
+            questionsArray={questionsArr}
+            onSelectNewQuestion={selectNewQuestion}
           />
-          <Hints />
+          <Hints hints={questionDetails.hints}/>
           <Solutions />
         </div>
       </div>
@@ -52,4 +55,20 @@ function Questions({ match, location }) {
   );
 }
 
-export default Questions;
+const mapStateToProps = (state) => {
+  return {
+    topicName: state.selectedFieldsReducer.topicDetails.topicName,
+    topicId: state.selectedFieldsReducer.topicDetails.topicId,
+    subTopicName: state.selectedFieldsReducer.subTopicName,
+    questionsArr: state.selectedFieldsReducer.questionsArr,
+    selectedQuestion: state.selectedFieldsReducer.selectedQuestion
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    setSelectedQuestion: (questionId) => dispatch({ type: "SET_SELECTED_QUESTION_ID", payload: { questionId } })
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Questions);

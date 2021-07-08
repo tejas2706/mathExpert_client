@@ -8,12 +8,12 @@ import StarBorderIcon from '@material-ui/icons/StarBorder';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
-function QuestionsCard({
+
+function QuestionsCard({ 
   question,
-  onQuestionClick,
   classForColor,
   additionalDataForDisplay,
-  questionsArray,
+  setSelectedQuestion
 }) {
   const [isSolved, setisSolved] = useState(true);
   const [isBookmarked, setBookmark] = useState(false);
@@ -25,11 +25,10 @@ function QuestionsCard({
   return (
     <Link
       to={{
-        pathname: `/${additionalDataForDisplay.standard}/${additionalDataForDisplay.topicName}/${additionalDataForDisplay.subTopicName}/${question.eachQues}`,
-        questionsArray,
+        pathname: `/question`,
       }}
       className="card"
-      onClick={() => onQuestionClick(question.eachQues)}>
+      onClick={() => setSelectedQuestion(question.eachQues)}>
       <div className={`filledbar ${classForColor}`}></div>
       <div className="questionsCard__title">
         <h3 className="title">Question {question.i}</h3>
@@ -60,6 +59,10 @@ function QuestionsCard({
 const mapDispatchToProps = (dispatch) => {
   return {
     addData: (data) => dispatch({ type: '' }),
+    setSelectedQuestion: (questionId) => {
+      console.log("🚀 ~ file: index.js ~ line 63 ~ mapDispatchToProps ~ questionId", questionId)
+      dispatch({ type: "SET_SELECTED_QUESTION_ID", payload: { questionId } })
+    }
   };
 };
 // mapDispatchToProps

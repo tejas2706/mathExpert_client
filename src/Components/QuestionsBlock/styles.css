@@ -36,6 +36,7 @@
     border-radius: 10px;
     background-color: green;
     margin: 5px;
+    cursor: pointer;
 }
 
 .questionsBlock__eachQues:hover{
