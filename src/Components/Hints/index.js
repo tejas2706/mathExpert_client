@@ -11,23 +11,23 @@ import Fade from '@material-ui/core/Fade';
 import HighlightOffIcon from '@material-ui/icons/HighlightOff';
 import './styles.css';
 
-function Hints() {
+function Hints({ hints }) {
   const [displayhints, setDisplayhints] = useState(false);
 
-  const allHints = [
-    {
-      id: 'hint1',
-      hint: 'Try to multiple 25 by 25.  ',
-    },
-    {
-      id: 'hint2',
-      hint: 'Try to multiple 5 by itself 4 times.',
-    },
-    {
-      id: 'hint3',
-      hint: 'Try to multiple 5 by itself 4 times.',
-    },
-  ];
+  // const allHints = [
+  //   {
+  //     id: 'hint1',
+  //     hint: 'Try to multiple 25 by 25.  ',
+  //   },
+  //   {
+  //     id: 'hint2',
+  //     hint: 'Try to multiple 5 by itself 4 times.',
+  //   },
+  //   {
+  //     id: 'hint3',
+  //     hint: 'Try to multiple 5 by itself 4 times.',
+  //   },
+  // ];
 
   return (
     <div className="hints__container">
@@ -44,7 +44,7 @@ function Hints() {
             <div>
               {
                 <HintsModal
-                  hints={allHints}
+                  hints={hints}
                   handleCloseHintsModal={() =>
                     setDisplayhints(false)
                   }></HintsModal>

@@ -15,6 +15,9 @@ const selectedFields = (state = {}, action) => {
       console.log('/////////////////// ~ file: userSelected.js ~ line 16 ~ selectedFields ~ action.payload', action.payload);
       state = { ...state, questionsArr: action.payload.questions };
       break;
+    case "SET_SELECTED_QUESTION_ID":
+      state = { ...state, selectedQuestion: action.payload.questionId };
+      break;
     default:
       break;
   }

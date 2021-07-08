@@ -35,6 +35,7 @@ export default function HintAccordion({ hints }) {
     <div className={classes.root}>
       {hints.length
         ? hints.map((each, index) => {
+            const hintId = `Hint ${index+1}`;
             return (
               <div className="hintAccordion__eachAccordion">
                 <Accordion
@@ -42,20 +43,20 @@ export default function HintAccordion({ hints }) {
                     backgroundColor: '#141E30',
                     color: ' rgb(226, 226, 226)',
                   }}
-                  expanded={expanded === each.id}
-                  onChange={handleChange(each.id)}>
+                  expanded={expanded === hintId}
+                  onChange={handleChange(hintId)}>
                   <AccordionSummary
                     expandIcon={<ExpandMoreIcon style={{ color: 'white' }} />}
                     aria-controls="panel1bh-content"
                     id="panel1bh-header">
                     <Typography className={classes.heading}>
-                      {each.id}
+                      {hintId}
                     </Typography>
                     {/* <Typography className={classes.secondaryHeading}>I am an accordion</Typography> */}
                   </AccordionSummary>
                   <AccordionDetails>
                     <Typography>
-                      <b>{each.hint}</b>
+                      <b>{each}</b>
                     </Typography>
                   </AccordionDetails>
                 </Accordion>
