@@ -6,6 +6,7 @@ import AccordionSummary from '@material-ui/core/AccordionSummary';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import './styles.css';
+import _ from 'lodash';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -35,7 +36,14 @@ export default function HintAccordion({ hints }) {
     <div className={classes.root}>
       {hints.length
         ? hints.map((each, index) => {
-            const hintId = `Hint ${index+1}`;
+            let id = `Hint ${index + 1}`;
+            let title = `Hint ${index + 1}`;
+            let accordionMessage = each;
+            if (_.isObject(each)) {
+              id = each.id;
+              title = `${each.title}`;
+              accordionMessage = each.expandedText;
+            }
             return (
               <div className="hintAccordion__eachAccordion">
                 <Accordion
@@ -43,20 +51,20 @@ export default function HintAccordion({ hints }) {
                     backgroundColor: '#141E30',
                     color: ' rgb(226, 226, 226)',
                   }}
-                  expanded={expanded === hintId}
-                  onChange={handleChange(hintId)}>
+                  expanded={expanded === id}
+                  onChange={handleChange(id)}>
                   <AccordionSummary
-                    expandIcon={<ExpandMoreIcon style={{ color: 'white' }} />}
+                    expandIcon={<ExpandMoreIcon style={{
+                       color: 'white',
+                      }} />}
                     aria-controls="panel1bh-content"
                     id="panel1bh-header">
-                    <Typography className={classes.heading}>
-                      {hintId}
-                    </Typography>
+                    <Typography className={classes.heading}>{title}</Typography>
                     {/* <Typography className={classes.secondaryHeading}>I am an accordion</Typography> */}
                   </AccordionSummary>
                   <AccordionDetails>
                     <Typography>
-                      <b>{each}</b>
+                      <b>{accordionMessage}</b>
                     </Typography>
                   </AccordionDetails>
                 </Accordion>

@@ -3,6 +3,8 @@ import face1 from '../../assets/face.png';
 import face2 from '../../assets/face12.png';
 import together from '../../assets/tejas_murtuza.jpeg';
 import './styles.css';
+import emailjs from 'emailjs-com';
+import _ from 'lodash';
 
 function AboutUs() {
   const [name, setname] = useState('');
@@ -11,10 +13,31 @@ function AboutUs() {
   const [city, setcity] = useState('');
   const [message, setmessage] = useState('');
 
-  const handleSubmit = (event) => {
-    let response = { name, emailId, phoneNo, city, message };
-    alert('Response was submitted');
-    event.preventDefault();
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const eClone = _.cloneDeep(e)
+    eClone.target[4].value = `
+      Name of the user: ${name},
+      City: ${city},
+      PhoneNo: ${phoneNo},
+      EmailId: ${emailId},
+      message: ${message}
+    `
+    emailjs
+      .sendForm('SERVICE_ID', 'TEMPLATE_ID', eClone.target, 'USER_ID')
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        },
+      );
+      setname('')
+      setphoneNo('')
+      setemailId('')
+      setcity('')
+      setmessage('')
   };
 
   return (
@@ -41,6 +64,7 @@ function AboutUs() {
               type="text"
               value={name}
               onChange={(e) => setname(e.target.value)}
+              name="from_name"
             />
             <input
               placeholder="email Id"
@@ -48,6 +72,7 @@ function AboutUs() {
               type="text"
               value={emailId}
               onChange={(e) => setemailId(e.target.value)}
+              name="reply_to"
             />
             <input
               placeholder="contact number"
@@ -69,6 +94,7 @@ function AboutUs() {
               type="text"
               value={message}
               onChange={(e) => setmessage(e.target.value)}
+              name="message"
             />
             <input type="submit" className="aboutUs__submit" value="Submit" />
           </form>

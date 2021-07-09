@@ -13,7 +13,8 @@ function QuestionsCard({
   question,
   classForColor,
   additionalDataForDisplay,
-  setSelectedQuestion
+  setSelectedQuestion,
+  isLoggedIn
 }) {
   const [isSolved, setisSolved] = useState(true);
   const [isBookmarked, setBookmark] = useState(false);
@@ -28,12 +29,12 @@ function QuestionsCard({
         pathname: `/question`,
       }}
       className="card"
-      onClick={() => setSelectedQuestion(question.eachQues)}>
+      onClick={() => setSelectedQuestion(question.eachQues._id)}>
       <div className={`filledbar ${classForColor}`}></div>
       <div className="questionsCard__title">
         <h3 className="title">Question {question.i}</h3>
         <div className="questionsCard__icons">
-          {isBookmarked ? (
+          {isLoggedIn && isBookmarked ? (
             <StarIcon
               style={{
                 color: '#FFD700',

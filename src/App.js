@@ -30,10 +30,10 @@ function App() {
             <Switch>
               <Route path="/profile" component={Profile} />
               <Route path="/topicDetails" exact component={TopicDetails} />
-              <Route path="/asd" exact component={Home} />
+              <Route path="/" exact component={Home} />
               <Route path="/question" component={Questions} />
               <Route path="/quizResult" component={QuizResult} />
-              <Route path="/" component={Quiz} />
+              <Route path="/quiz" component={Quiz} />
               <Route path="/aboutUs" component={AboutUs} />
               <Route path="/content" component={Content} />
               <Route path="/faq" component={FAQ} />

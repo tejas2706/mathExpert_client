@@ -28,6 +28,10 @@
     transition: transform 0.2s;
 }
 
+.difficultyLevels__btn:active, .difficultyLevels__btn:focus{
+    border: none;
+    background-color: gray;
+}
 .difficultyLevels__btn:hover{
     color: gray;
     transform: scale(1.15);

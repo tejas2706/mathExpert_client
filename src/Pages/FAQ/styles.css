@@ -21,7 +21,6 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position-x: center;
-    border-right: 2px solid gray;
 }
 
 .faq__content__container{
@@ -29,12 +28,13 @@
     min-width: 250px;
     height: 70%;
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
 }
 
 .faq__content__header{
     display: flex;
-    justify-content: center;
     flex: 1;
 }
 
@@ -42,6 +42,7 @@
     flex: 4;
     overflow-y: scroll;
     display: flex;
+    width: 80%;
     flex-wrap: wrap;
 }
 
@@ -49,8 +50,6 @@
     .faq__image__container{
         height: 30%;
         margin-top: 60px;
-        border-right: 0px solid gray;
-        border-bottom: 2px solid gray;
     }
     .faq__content__container{
         height: 60%;
