@@ -15,6 +15,7 @@ import AboutUs from './Pages/AboutUs';
 import Profile from './Pages/Profile';
 import FAQ from './Pages/FAQ';
 import Login from './Pages/Login';
+import Navbar from './Components/Navbar';
 
 import ChooseContent from './Pages/ChooseContent';
 import LearningTrack from './Pages/LearningTrack';
@@ -25,17 +26,16 @@ function App() {
       <PersistGate loading={null} persistor={persistor}>
         <Router>
           <div className="app__root">
-            {/* <Navbar /> */}
+            <Navbar />
             <Switch>
               <Route path="/profile" component={Profile} />
               <Route path="/topicDetails" exact component={TopicDetails} />
               <Route path="/asd" exact component={Home} />
               <Route path="/question" component={Questions} />
               <Route path="/quizResult" component={QuizResult} />
-              <Route path="/quiz" component={Quiz} />
+              <Route path="/" component={Quiz} />
               <Route path="/aboutUs" component={AboutUs} />
-              <Route path="/" component={Content} />
-              <Route path="/quizResult" component={QuizResult} />
+              <Route path="/content" component={Content} />
               <Route path="/faq" component={FAQ} />
               <Route path="/login" exact component={Login} />
               <Route path="/chooseContent" component={ChooseContent} />

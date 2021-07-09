@@ -129,17 +129,19 @@ function TopicDetails({ match, standard, topicId, topicName, subTopicName, quest
             </div>
           </div>
           <div className="topicDetails__questionContainer">
-            <DifficultyLevels
-              handleDifficultyLevelChange={handleDifficultyLevelChange}
-            />
             <div className="topicDetails__subTopicTitle">
               <h2>{subTopicName}</h2>
+
               <div
                 className="topicDetails__subTopicTitle__dropdown"
                 onClick={handleOpen}>
                 <i className="arrow down"></i>
               </div>
             </div>
+            
+            <DifficultyLevels
+              handleDifficultyLevelChange={handleDifficultyLevelChange}
+            />
             <div className="topicDetails__questions">
               {renderHexagons(difficultyLevel, questionsArr, { subTopicName: subTopicName })}
             </div>
