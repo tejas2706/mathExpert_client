@@ -16,6 +16,7 @@ import Profile from './Pages/Profile';
 import FAQ from './Pages/FAQ';
 import Login from './Pages/Login';
 import Navbar from './Components/Navbar';
+import Footer from './Components/Footer';
 
 import ChooseContent from './Pages/ChooseContent';
 import LearningTrack from './Pages/LearningTrack';
@@ -41,7 +42,7 @@ function App() {
               <Route path="/chooseContent" component={ChooseContent} />
               <Route path="/LearningTrack" component={LearningTrack} />
             </Switch>
-            {/* <Footer /> */}
+            <Footer />
             {/* <QuizResult /> */}
             {/* <Home/> */}
             {/* <Questions /> */}

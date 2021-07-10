@@ -167,3 +167,97 @@
     opacity: 1;
     right: 0;
 }
+
+.banner__getStartedModal{
+    width: 60vw;
+    /* height: 70vh; */
+    min-width: 340px;
+    background-color: white;
+    /* overflow-y: scroll; */
+    background-color: rgb(214, 214, 214);
+    border-radius: 20px;
+}
+
+.banner__getStartedModal_title{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin: 0;
+    padding-right: 10px;
+    padding-top: 3px;
+}
+
+.banner__getStartedModal_Content,.getStarted,.getStarted__buttons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.getStarted{
+    margin: 5px 30px 20px 30px;
+}
+
+.getStarted__title{
+    color: rgb(67, 67, 67);
+    text-align: center;
+}
+
+.getStarted__mathematics{
+    color: #8A2524;
+    padding: 0.5px 5px;
+    border-radius: 10px;
+}
+
+.getStarted__text1{
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.getStarted__buttons{
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.getStarted_demoBtn, .getStarted_purchaseBtn{
+    padding: 20px 10px;
+    /* margin: 0 10px; */
+    justify-content: space-between;
+    border-radius: 10px;
+    width: 25%;
+    font-size: large;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 5px 5px 10px gray;
+    min-width: 110px;
+}
+
+.getStarted_demoBtn{
+    border: 2px solid #8A2524;
+    background-color: white;
+    color: #8A2524;
+}
+
+.getStarted_demoBtn:hover{
+    border: 2px solid #691c1b;
+    box-shadow: 5px 5px 5px gray;
+    color: #691c1b;
+}
+
+.getStarted_purchaseBtn{
+    background-color: #8A2524;
+    border: 2px solid #8A2524;
+    color: white;
+}
+
+.getStarted_purchaseBtn:hover{
+    background-color: #691c1b;
+    border: 2px solid #691c1b;
+    box-shadow: 5px 5px 5px gray;
+}
+
+.getStarted_faq{
+    margin-top: 20px;
+}
