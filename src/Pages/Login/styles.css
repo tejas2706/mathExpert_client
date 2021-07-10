@@ -28,7 +28,7 @@
     min-width: 290px;
     border-radius: 20px;
     background-color: white ;
-    box-shadow: 3px 3px 3px gray;
+    box-shadow: 0 10px 10px 5px gray;
     justify-content: center;
     align-items: center;
     width: 35%;
@@ -44,10 +44,19 @@
     flex-direction: row;
 }
 
+.login__action__header{
+    color: rgb(92, 91, 91);
+}
+
 .login__action__emailInput, .login__action__passwordInput{
-    padding: 10px;
     border-radius: 10px;
+    padding: 10px;
     width: 100%;
+}
+
+.login__action__inputs{
+    padding: 10px;
+    width: 90%;
 }
 
 .login__btn{
@@ -55,7 +64,7 @@
     min-width: 180px;
     background-color: indigo;
     padding: 10px;
-    width: 100%;
+    width: 90%;
     color: whitesmoke;
     font-weight: bolder;
     text-align: center;
@@ -63,6 +72,12 @@
     align-items: center;
     border-radius: 20px;
     box-shadow: 3px 3px 3px gray;
+    cursor: pointer;
+    font-size: larger;
+}
+
+.login__btn:hover{
+    box-shadow: none;
 }
 
 .login__third__party{
@@ -76,8 +91,6 @@
 .login__via__google{
     background-color: #DD4B39;
     border-radius: 20px;
-    box-shadow: none
-
 }
 
 

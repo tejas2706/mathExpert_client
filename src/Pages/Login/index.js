@@ -12,21 +12,21 @@ export default function Login() {
       </div> */}
       <div className="login__action__section">
         <div className="login__action__container">
-        <div className="login__action__companyname">
+          <div className="login__action__companyname">
             <LaptopChromebookIcon style={{ fontSize: "80px" }} />
             <h1>Math Expert</h1>
           </div>
           <div className="login__action__header">
             <h1>Sign in to your account</h1>
           </div>
-          <div className="login__action__emailInput">
+          <div className="login__action__inputs">
             <input
               type="text"
               placeholder="Email Address"
               className="login__action__emailInput"
             />
           </div>
-          <div className="login__action__passwordInput">
+          <div className="login__action__inputs">
             <input
               type="password"
               placeholder="Password"
@@ -34,7 +34,8 @@ export default function Login() {
             />
           </div>
           <div className="login__btn">Login</div>
-          <h3> OR </h3>
+          <br></br>
+          {/* <h3> OR </h3> */}
           <div className="login__third__party">
             <div className=" login__btn login__via__google">
               Login with Google
